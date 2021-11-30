@@ -1,0 +1,12 @@
+
+.idea/
+
+.DS_Store
+
+day1/__pycache__/
+
+day11/__pycache__/
+
+*.pyc
+
+venv/
