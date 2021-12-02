@@ -10,3 +10,7 @@ day11/__pycache__/
 *.pyc
 
 venv/
+
+AOC2021/cmake-build-debug/
+
+AOC2021/main.cpp
