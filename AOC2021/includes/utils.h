@@ -5,20 +5,32 @@
 #include <fstream>
 #include <string>
 
-template<typename T>
-using data_container = std::vector<T>;
+using std::cout, std::vector, std::string;
 
-template<typename T>
-std::vector<T> input_lines(int day)  {
-    std::string input_file_name = "day" + std::to_string(day) + "/input.in";
-    std::ifstream file_stream(input_file_name);
+class Day {
+public:
+    Day(int day_number) {
+        this->day_number = day_number;
 
-    std::vector<T> line_items;
-    T line_item;
-    while (file_stream >> line_item) {
-        line_items.push_back(line_item);
+        string input_file_name = "day" + std::to_string(day_number) + "/input.in";
+        std::ifstream file_stream(input_file_name);
+
+        string line;
+        while (std::getline(file_stream, line, '\n')) {
+            input_lines.push_back(line);
+        }
+
     }
-    return line_items;
-}
+
+    virtual int part1() = 0;
+
+    virtual int part2() = 0;
+
+protected:
+    vector<string> input_lines;
+
+private:
+    int day_number;
+};
 
 #endif //AOC2021_UTILS_H

@@ -2,17 +2,31 @@
 #include <vector>
 #include "../includes/utils.h"
 
-using std::cout, std::vector;
+using std::stoi;
 
 int const DAY = 1;
 
-using data_type = int;
-using type_container = data_container<data_type>;
+class Day1 : public Day {
+public:
+    explicit Day1(int day_number) : Day(day_number) {
+        for (string const& line : input_lines) {
+            depths.push_back(stoi(line));
+        }
+    }
 
-int part1(type_container& depths) {
+    int part1() override;
+
+    int part2() override;
+
+
+private:
+    vector<int> depths;
+};
+
+int Day1::part1() {
     int increased = 0, current_depth = INT_MAX;
 
-    for (int depth : depths) {
+    for (int depth : this->depths) {
         increased += depth > current_depth;
         current_depth = depth;
     }
@@ -20,7 +34,7 @@ int part1(type_container& depths) {
     return increased;
 }
 
-int part2(type_container& depths) {
+int Day1::part2() {
     assert(depths.size() >= 3);
 
     int sum = depths[0] + depths[1] + depths[2];
@@ -34,11 +48,12 @@ int part2(type_container& depths) {
     return increased;
 }
 
-int main() {
-    type_container depths = input_lines<data_type>(DAY);
 
-    cout << part1(depths) << '\n';
-    cout << part2(depths) << '\n';
+int main() {
+    Day1 day = Day1(DAY);
+
+    cout << day.part1() << '\n';
+    cout << day.part2() << '\n';
 
     return 0;
 }
