@@ -11,7 +11,7 @@ string const UP = "up";
 
 class Day2 : public Day {
 public:
-    Day2(int day_number) : Day(day_number) {
+    explicit Day2(int day_number) : Day(day_number) {
         for (string const& line : input_lines) {
             string instruction;
             int instruction_modifier;
