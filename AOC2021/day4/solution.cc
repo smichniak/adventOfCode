@@ -1,10 +1,9 @@
 #include <iostream>
-#include <vector>
 #include <unordered_map>
 #include <sstream>
 #include "../includes/utils.h"
 
-using std::vector, std::unordered_map, std::stoi, std::stringstream;
+using std::unordered_map, std::stoi, std::stringstream, std::getline;
 
 int const DAY = 4;
 int const BOARD_SIZE = 5;
@@ -134,14 +133,14 @@ public:
         stringstream string_stream(input_lines[0]);
         string num_string;
 
-        while (std::getline(string_stream, num_string, ',')) {
+        while (getline(string_stream, num_string, ',')) {
             numbers.push_back(stoi(num_string));
         }
 
         vector<int> board_nums;
         for (int i = 1; i < input_lines.size(); ++i) {
             string_stream = stringstream(input_lines[i]);
-            while (std::getline(string_stream, num_string, ' ')) {
+            while (getline(string_stream, num_string, ' ')) {
                 if (!num_string.empty()) {
                     board_nums.push_back(stoi(num_string));
                 }

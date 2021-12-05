@@ -1,10 +1,9 @@
 #include <iostream>
-#include <vector>
 #include <bitset>
 #include <algorithm>
 #include "../includes/utils.h"
 
-using std::vector, std::bitset, std::copy_if, std::back_inserter;
+using std::bitset, std::copy_if, std::back_inserter;
 
 int const DAY = 3;
 int constexpr NUMBER_LENGTH = 12;
