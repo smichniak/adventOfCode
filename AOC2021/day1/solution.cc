@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 #include "../includes/utils.h"
 
 using std::stoi;

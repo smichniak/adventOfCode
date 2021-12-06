@@ -9,9 +9,7 @@ using std::cout, std::vector, std::string;
 
 class Day {
 public:
-    Day(int day_number) {
-        this->day_number = day_number;
-
+    explicit Day(int day_number) {
         string input_file_name = "day" + std::to_string(day_number) + "/input.in";
         std::ifstream file_stream(input_file_name);
 
@@ -28,9 +26,6 @@ public:
 
 protected:
     vector<string> input_lines;
-
-private:
-    int day_number;
 };
 
 #endif //AOC2021_UTILS_H
