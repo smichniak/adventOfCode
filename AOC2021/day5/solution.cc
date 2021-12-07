@@ -36,7 +36,7 @@ private:
     vector<int> fields;
 };
 
-class Day5 : public Day {
+class Day5 : public Day<int> {
 public:
     explicit Day5(int day_number) : Day(day_number) {
         int max_x = 0, max_y = 0;

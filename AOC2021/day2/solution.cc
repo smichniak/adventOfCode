@@ -9,7 +9,7 @@ int const DAY = 2;
 string const FORWARD = "forward";
 string const UP = "up";
 
-class Day2 : public Day {
+class Day2 : public Day<int> {
 public:
     explicit Day2(int day_number) : Day(day_number) {
         for (string const& line : input_lines) {

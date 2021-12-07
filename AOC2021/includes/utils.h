@@ -7,6 +7,7 @@
 
 using std::cout, std::vector, std::string;
 
+template<typename T>
 class Day {
 public:
     explicit Day(int day_number) {
@@ -20,9 +21,9 @@ public:
 
     }
 
-    virtual int part1() = 0;
+    virtual T part1() = 0;
 
-    virtual int part2() = 0;
+    virtual T part2() = 0;
 
 protected:
     vector<string> input_lines;

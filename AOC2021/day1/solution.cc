@@ -5,7 +5,7 @@ using std::stoi;
 
 int const DAY = 1;
 
-class Day1 : public Day {
+class Day1 : public Day<int> {
 public:
     explicit Day1(int day_number) : Day(day_number) {
         for (string const& line : input_lines) {

@@ -127,7 +127,7 @@ private:
     bool deleted = false;
 };
 
-class Day4 : public Day {
+class Day4 : public Day<int> {
 public:
     explicit Day4(int day_number) : Day(day_number) {
         stringstream string_stream(input_lines[0]);

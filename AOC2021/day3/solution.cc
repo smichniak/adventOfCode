@@ -54,7 +54,7 @@ int best_bit_match(vector<int> numbers, bool swap) {
     return numbers[0];
 }
 
-class Day3 : public Day {
+class Day3 : public Day<int> {
 public:
     explicit Day3(int day_number) : Day(day_number) {
         for (string const& line : input_lines) {
