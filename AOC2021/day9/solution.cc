@@ -4,7 +4,7 @@
 #include <algorithm>
 #include "../includes/utils.h"
 
-using std::vector, std::stringstream, std::prev, std::iota, std::max;
+using std::vector, std::prev, std::iota, std::max;
 
 int const DAY = 9;
 int const DX[4] = {-1, 1, 0, 0};
@@ -12,7 +12,7 @@ int const DY[4] = {0, 0, -1, 1};
 
 class Find_union {
 public:
-    Find_union(int size) {
+    explicit Find_union(int size) {
         roots = vector<int>(size);
         iota(roots.begin(), roots.end(), 0);
         weights = vector<int>(size, 1);
