@@ -29,4 +29,22 @@ protected:
     vector<string> input_lines;
 };
 
+namespace std {
+    template<>
+    struct hash<std::pair<int, int>> {
+        inline size_t operator()(const std::pair<int, int>& v) const {
+            std::hash<int> int_hasher;
+            return int_hasher(v.first) ^ int_hasher(v.second);
+        }
+    };
+
+    template<>
+    struct hash<std::pair<char, char>> {
+        inline size_t operator()(const std::pair<int, int>& v) const {
+            std::hash<char> char_hasher;
+            return char_hasher(v.first) ^ char_hasher(v.second);
+        }
+    };
+}
+
 #endif //AOC2021_UTILS_H
