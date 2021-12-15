@@ -7,6 +7,9 @@
 
 using std::cout, std::vector, std::string;
 
+int const DX[4] = {-1, 1, 0, 0};
+int const DY[4] = {0, 0, -1, 1};
+
 template<typename T>
 class Day {
 public:

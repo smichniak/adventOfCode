@@ -7,8 +7,6 @@
 using std::vector, std::prev, std::iota, std::max;
 
 int const DAY = 9;
-int const DX[4] = {-1, 1, 0, 0};
-int const DY[4] = {0, 0, -1, 1};
 
 class Find_union {
 public:
