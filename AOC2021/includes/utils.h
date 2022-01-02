@@ -50,4 +50,26 @@ namespace std {
     };
 }
 
+template <typename ... Ts, std::size_t ... Is>
+std::tuple<Ts...> sumT (std::tuple<Ts...> const & t1,
+                        std::tuple<Ts...> const & t2,
+                        std::index_sequence<Is...> const &)
+{ return { (std::get<Is>(t1) + std::get<Is>(t2))... }; }
+
+template <typename ... Ts, std::size_t ... Is>
+std::tuple<Ts...> diffT (std::tuple<Ts...> const & t1,
+                         std::tuple<Ts...> const & t2,
+                         std::index_sequence<Is...> const &)
+{ return { (std::get<Is>(t1) - std::get<Is>(t2))... }; }
+
+template <typename ... Ts>
+std::tuple<Ts...> operator+ (std::tuple<Ts...> const & t1,
+                             std::tuple<Ts...> const & t2)
+{ return sumT(t1, t2, std::make_index_sequence<sizeof...(Ts)>{}); }
+
+template <typename ... Ts>
+std::tuple<Ts...> operator- (std::tuple<Ts...> const & t1,
+                             std::tuple<Ts...> const & t2)
+{ return diffT(t1, t2, std::make_index_sequence<sizeof...(Ts)>{}); }
+
 #endif //AOC2021_UTILS_H
