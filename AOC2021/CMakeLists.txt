@@ -25,3 +25,4 @@ add_executable(day19 day19/solution.cc)
 
 add_executable(day21 day21/solution.cc)
 add_executable(day22 day22/solution.cc)
+add_executable(day23 day23/solution.cc)
