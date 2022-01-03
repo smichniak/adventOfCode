@@ -5,7 +5,7 @@
 #include <utility>
 #include "../includes/utils.h"
 
-using std::array, std::map, std::pair, std::min, std::max, std::abs, std::priority_queue, std::greater;
+using std::array, std::map, std::pair, std::min, std::max, std::abs, std::priority_queue;
 
 using pair_vector = vector<pair<int, int>>;
 
@@ -20,15 +20,13 @@ map<AmphipodType, int> move_cost{{A, 1},
                                  {C, 100},
                                  {D, 1000}};
 
-vector<int> const board_locations{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 21, 40, 41, 60, 61, 80, 81};
-
-
 class BoardState {
 public:
     BoardState() = default;
 
-    explicit BoardState(map<int, AmphipodType> occupied_locations) {
+    explicit BoardState(map<int, AmphipodType> occupied_locations, int depth) {
         this->occupied_locations = std::move(occupied_locations);
+        this->depth = depth;
     }
 
     vector<pair<BoardState, int>> reachable_states(int source_location) {
@@ -42,7 +40,7 @@ public:
             map<int, AmphipodType> new_occupied = occupied_locations;
             new_occupied[source_location] = Empty;
             new_occupied[target] = amphipod_on_source;
-            result.emplace_back(new_occupied, cost);
+            result.emplace_back(BoardState(new_occupied, depth), cost);
         }
 
         return result;
@@ -72,25 +70,24 @@ public:
             cout << get_location_char(i);
         }
         cout << "#\n";
-        for (int i = 0; i <= 10; ++i) {
-            if (i == 3 || i == 5 || i == 7 || i == 9) {
-                cout << get_location_char((i - 1) * 10);
-            } else {
-                cout << '#';
+        for (int d = 0; d < depth; ++d) {
+            for (int i = 0; i <= 10; ++i) {
+                if (i == 3 || i == 5 || i == 7 || i == 9) {
+                    cout << get_location_char((i - 1) * 10 + d);
+                } else {
+                    cout << '#';
+                }
             }
+            cout << "##\n";
         }
-        cout << "##\n";
-        for (int i = 0; i <= 10; ++i) {
-            if (i == 3 || i == 5 || i == 7 || i == 9) {
-                cout << get_location_char((i - 1) * 10 + 1);
-            } else {
-                cout << '#';
-            }
-        }
-        cout << "##\n\n";
+
+        cout << '\n';
     }
 
 private:
+    map<int, AmphipodType> occupied_locations;
+    int depth{};
+
     static inline bool legal_top_location(int location) {
         return location == 0 || location == 10 || location % 2 != 0;
     }
@@ -105,13 +102,23 @@ private:
             }
         }
 
-        int move_to_room_cost = (abs(target - location) + 1) * move_cost[amphipod_type];
+        int move_above_room_cost = abs(target - location) * move_cost[amphipod_type];
         target *= 10; // Change target from top row to location of the room
 
-        if (occupied_locations[target + 1] == Empty) {
-            result.emplace_back(target + 1, move_to_room_cost + move_cost[amphipod_type]);
-        } else if (occupied_locations[target] == Empty && occupied_locations[target + 1] == amphipod_type) {
-            result.emplace_back(target, move_to_room_cost);
+        if (occupied_locations[target + depth - 1] == Empty) {
+            // Check if the the deepest location in a room is empty
+            result.emplace_back(target + depth - 1, move_above_room_cost + move_cost[amphipod_type] * depth);
+            return result;
+        }
+
+        for (int current_depth = depth - 2; current_depth >= 0; --current_depth) {
+            // Find deepest, not filled location in a room
+            if (occupied_locations[target + current_depth] == Empty &&
+                occupied_locations[target + current_depth + 1] == amphipod_type) {
+                result.emplace_back(target + current_depth,
+                                    move_above_room_cost + move_cost[amphipod_type] * (current_depth + 1));
+                break;
+            }
         }
 
         return result;
@@ -119,22 +126,24 @@ private:
 
     pair_vector room_to_top(int location, AmphipodType amphipod_type) {
         vector<pair<int, int>> result;
-        bool deep_room = location % 10 == 1;
-        if (deep_room && occupied_locations[location - 1] != Empty) {
+        bool deep_location = location % 10 != 0;
+        if (deep_location && occupied_locations[location - 1] != Empty) {
             return result;
         }
+        int move_out_of_room_cost = (location % 10 + 1) * move_cost[amphipod_type];
+
         location /= 10;
         for (int i = 1; location - i >= 0 && occupied_locations[location - i] == Empty; ++i) {
             if (legal_top_location(location - i)) {
-                int move_to_top_cost = (i + 1 + deep_room) * move_cost[amphipod_type];
-                result.emplace_back(location - i, move_to_top_cost);
+                int total_move_cost = i * move_cost[amphipod_type] + move_out_of_room_cost;
+                result.emplace_back(location - i, total_move_cost);
             }
         }
 
         for (int i = 1; location + i <= 10 && occupied_locations[location + i] == Empty; ++i) {
             if (legal_top_location(location + i)) {
-                int move_to_top_cost = (i + 1 + deep_room) * move_cost[amphipod_type];
-                result.emplace_back(location + i, move_to_top_cost);
+                int total_move_cost = i * move_cost[amphipod_type] + move_out_of_room_cost;
+                result.emplace_back(location + i, total_move_cost);
             }
         }
         return result;
@@ -148,8 +157,6 @@ private:
             return room_to_top(location, amphipod_type);
         }
     }
-
-    map<int, AmphipodType> occupied_locations;
 };
 
 using board_cost_map = map<BoardState, int>;
@@ -161,9 +168,6 @@ using board_queue = priority_queue<cost_board, vector<cost_board>, decltype(cmp_
 class Day23 : public Day<int> {
 public:
     explicit Day23(int day_number) : Day(day_number) {
-        map<int, AmphipodType> occupied_locations;
-        map<int, AmphipodType> target_occupied_locations;
-
         for (int location : board_locations) {
             if (location <= 10) {
                 occupied_locations[location] = Empty;
@@ -177,9 +181,6 @@ public:
             }
         }
 
-
-        starting_state = BoardState(occupied_locations);
-        target_state = BoardState(target_occupied_locations);
     }
 
     int part1() override;
@@ -188,10 +189,12 @@ public:
 
 
 private:
-    BoardState starting_state;
-    BoardState target_state;
+    map<int, AmphipodType> occupied_locations;
+    map<int, AmphipodType> target_occupied_locations;
+    vector<int> board_locations{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 21, 40, 41, 60, 61, 80, 81};
 
-    void add_neighbours(board_cost_map& path_costs, board_queue& path_cost_queue, int cost, BoardState& board) {
+    void add_neighbours(board_cost_map& path_costs, board_queue& path_cost_queue, int cost, BoardState& board,
+                        BoardState& target_state) {
         for (int source_location : board_locations) {
             for (auto const&[new_board, cost_to_move] : board.reachable_states(source_location)) {
                 int new_cost = cost + cost_to_move;
@@ -207,7 +210,7 @@ private:
     }
 
 
-    void dijkstra(board_cost_map& board_costs) {
+    void dijkstra(board_cost_map& board_costs, BoardState& starting_state, BoardState& target_state) {
         board_costs[starting_state] = 0;
         board_costs[target_state] = INT_MAX;
 
@@ -220,24 +223,55 @@ private:
             path_cost_queue.pop();
 
             if (board == target_state) {
-                cout << board_costs.size() << " size\n";
                 break;
             }
-            add_neighbours(board_costs, path_cost_queue, cost, board);
+            add_neighbours(board_costs, path_cost_queue, cost, board, target_state);
         }
     }
 
+    void add_folded_locations() {
+        for (int location : board_locations) {
+            if (location > 10 && location % 10 == 0) {
+                board_locations.emplace_back(location + 2);
+                board_locations.emplace_back(location + 3);
+                target_occupied_locations[location + 2] = static_cast<AmphipodType>(location / 20 - 1);
+                target_occupied_locations[location + 3] = static_cast<AmphipodType>(location / 20 - 1);
+                occupied_locations[location + 3] = occupied_locations[location + 1];
+            }
+        }
+
+        occupied_locations[21] = D;
+        occupied_locations[22] = D;
+        occupied_locations[41] = C;
+        occupied_locations[42] = B;
+        occupied_locations[61] = B;
+        occupied_locations[62] = A;
+        occupied_locations[81] = A;
+        occupied_locations[82] = C;
+    }
 };
 
 
 int Day23::part1() {
+    int depth = 2;
+    BoardState starting_state = BoardState(occupied_locations, depth);
+    BoardState target_state = BoardState(target_occupied_locations, depth);
+
     board_cost_map board_costs;
-    dijkstra(board_costs);
+    dijkstra(board_costs, starting_state, target_state);
     return board_costs[target_state];
 }
 
 int Day23::part2() {
+    int depth = 4;
+    add_folded_locations();
 
+    BoardState starting_state = BoardState(occupied_locations, depth);
+    BoardState target_state = BoardState(target_occupied_locations, depth);
+
+    board_cost_map board_costs;
+    dijkstra(board_costs, starting_state, target_state);
+    return board_costs[target_state];
 }
 
 
@@ -248,4 +282,3 @@ int main() {
     cout << day.part2() << '\n';
     return 0;
 }
-
