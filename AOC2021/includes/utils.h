@@ -33,21 +33,22 @@ protected:
 };
 
 namespace std {
-    template<>
-    struct hash<std::pair<int, int>> {
-        inline size_t operator()(const std::pair<int, int>& v) const {
-            std::hash<int> int_hasher;
-            return int_hasher(v.first) ^ int_hasher(v.second);
+    template<typename T, typename G>
+    struct hash<std::pair<T, G>> {
+        inline size_t operator()(const std::pair<T, G>& v) const {
+            std::hash<T> T_hasher;
+            std::hash<G> G_hasher;
+            return T_hasher(v.first) ^ G_hasher(v.second);
         }
     };
 
-    template<>
-    struct hash<std::pair<char, char>> {
-        inline size_t operator()(const std::pair<int, int>& v) const {
-            std::hash<char> char_hasher;
-            return char_hasher(v.first) ^ char_hasher(v.second);
-        }
-    };
+//    template<>
+//    struct hash<std::pair<char, char>> {
+//        inline size_t operator()(const std::pair<int, int>& v) const {
+//            std::hash<char> char_hasher;
+//            return char_hasher(v.first) ^ char_hasher(v.second);
+//        }
+//    };
 }
 
 template <typename ... Ts, std::size_t ... Is>
