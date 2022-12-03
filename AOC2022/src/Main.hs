@@ -13,7 +13,8 @@ lastDay = length solutions `div` 2
 printDaySolution :: Int -> Int -> IO ()
 printDaySolution day part = do
   fileContent <- readFile $ inputFile day
-  print $ (solutions !! ((day - 1) * 2 + part - 1)) fileContent
+  result <- (solutions !! ((day - 1) * 2 + part - 1)) fileContent
+  print result
 
 usage :: IO ()
 usage = do
@@ -22,8 +23,8 @@ usage = do
       [ "Advent of Code 2022 - Haskell solutions",
         "Usage: Call with one of the following argument combinations:",
         "  --help         Display this help message.",
-        "  last           First solution for both parts of the last day.",
-        "  (day) (part)   Print solutions for a given day and part."
+        "  last           Print solution for both parts of the last day.",
+        "  (day) (part)   Print solution for a given day and part."
       ]
 
 main :: IO ()
@@ -34,4 +35,5 @@ main = do
     ["--help"] -> usage
     ["last"] -> printDaySolution lastDay 1 >> printDaySolution lastDay 2
     [readMaybe -> Just day, readMaybe -> Just part] -> printDaySolution day part
+    [readMaybe -> Just day] -> printDaySolution day 1 >> printDaySolution day 2
     _ -> putStrLn "Wrong arguments provided"
