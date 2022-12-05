@@ -24,6 +24,7 @@ usage = do
         "Usage: Call with one of the following argument combinations:",
         "  --help         Display this help message.",
         "  last           Print solution for both parts of the last day.",
+        "  (day)          Print solution for both parts of a given day.",
         "  (day) (part)   Print solution for a given day and part."
       ]
 

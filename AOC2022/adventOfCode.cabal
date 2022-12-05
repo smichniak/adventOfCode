@@ -26,12 +26,13 @@ executable adventOfCode
                       Day1,
                       Day2,
                       Day3,
-                      Day4
+                      Day4,
+                      Day5
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
     
-    build-depends:    split
+    build-depends:    split, array
 
     build-depends:    base ^>=4.16.3.0
     hs-source-dirs:   src

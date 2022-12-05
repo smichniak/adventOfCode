@@ -5,8 +5,8 @@ import Utils (DayInput, DayMain, DaySolution, standardMain)
 
 type InputType = [(Int, Int)]
 
-inputReader :: DayInput InputType
-inputReader = map (\x -> (ord (head x) - ord 'A', ord (last x) - ord 'X')) . lines
+inputParser :: DayInput InputType
+inputParser = map (\x -> (ord (head x) - ord 'A', ord (last x) - ord 'X')) . lines
 
 points1 :: Int -> Int -> Int
 points1 opponent me = me + 1 + 3 * ((me - opponent + 1) `mod` 3)
@@ -21,7 +21,7 @@ solution2 :: DaySolution InputType
 solution2 = sum . map (uncurry points2)
 
 main1 :: DayMain
-main1 = standardMain solution1 inputReader
+main1 = standardMain solution1 inputParser
 
 main2 :: DayMain
-main2 = standardMain solution2 inputReader
+main2 = standardMain solution2 inputParser
