@@ -14,7 +14,7 @@ printDaySolution :: Int -> Int -> IO ()
 printDaySolution day part = do
   fileContent <- readFile $ inputFile day
   result <- (solutions !! ((day - 1) * 2 + part - 1)) fileContent
-  print result
+  putStrLn result
 
 usage :: IO ()
 usage = do
@@ -24,6 +24,7 @@ usage = do
         "Usage: Call with one of the following argument combinations:",
         "  --help         Display this help message.",
         "  last           Print solution for both parts of the last day.",
+        "  all            Print solution for all days and parts.",
         "  (day)          Print solution for both parts of a given day.",
         "  (day) (part)   Print solution for a given day and part."
       ]
@@ -35,6 +36,7 @@ main = do
     [] -> putStrLn "No arguments provided"
     ["--help"] -> usage
     ["last"] -> printDaySolution lastDay 1 >> printDaySolution lastDay 2
+    ["all"] -> mapM_ (\x -> putStrLn ("Day " ++ show x ++ ":") >> printDaySolution x 1 >> printDaySolution x 2) [1 .. lastDay]
     [readMaybe -> Just day, readMaybe -> Just part] -> printDaySolution day part
     [readMaybe -> Just day] -> printDaySolution day 1 >> printDaySolution day 2
     _ -> putStrLn "Wrong arguments provided"
