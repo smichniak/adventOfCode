@@ -1,5 +1,7 @@
 module Utils where
 
+import qualified Data.Set as Set
+
 fromBool :: Bool -> Int
 fromBool True = 1
 fromBool False = 0
@@ -23,3 +25,11 @@ standardMain solution inputReader s = return $ show $ (solution . inputReader) s
 
 standardStringMain :: DayStringSolution a -> DayInput a -> DayMain
 standardStringMain solution inputReader s = return $ (solution . inputReader) s
+
+partitions :: [a] -> [([a], [a])]
+-- partitions l = foldl (\acc num -> splitAt num l : acc) [] [0 .. length l]
+partitions l = foldl (flip $ (:) . flip splitAt l) [] [0 .. length l]
+
+condInsert :: Ord a => Bool -> a -> Set.Set a -> Set.Set a
+condInsert True x = Set.insert x
+condInsert False _ = id
