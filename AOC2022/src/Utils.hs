@@ -33,3 +33,6 @@ partitions l = foldl (flip $ (:) . flip splitAt l) [] [0 .. length l]
 condInsert :: Ord a => Bool -> a -> Set.Set a -> Set.Set a
 condInsert True x = Set.insert x
 condInsert False _ = id
+
+combine :: (a -> b) -> (c -> d -> a) -> (c -> d -> b)
+combine g f x = g . f x
