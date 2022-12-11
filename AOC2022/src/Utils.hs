@@ -36,3 +36,10 @@ condInsert False _ = id
 
 combine :: (a -> b) -> (c -> d -> a) -> (c -> d -> b)
 combine g f x = g . f x
+
+butLast :: [a] -> a
+butLast [x, _] = x
+butLast (_ : xs) = butLast xs
+
+compose :: Int -> (a -> a) -> a -> a
+compose n f = foldr (.) id (replicate n f)

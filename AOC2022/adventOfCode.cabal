@@ -32,7 +32,8 @@ executable adventOfCode
                       Day7,
                       Day8,
                       Day9,
-                      Day10
+                      Day10,
+                      Day11
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
