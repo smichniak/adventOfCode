@@ -13,6 +13,7 @@ import qualified Day8
 import qualified Day9
 import qualified Day10
 import qualified Day11
+import qualified Day12
 
 solutions :: [DayMain]
 solutions = [Day1.main1, Day1.main2,
@@ -25,4 +26,5 @@ solutions = [Day1.main1, Day1.main2,
              Day8.main1, Day8.main2,
              Day9.main1, Day9.main2,
              Day10.main1, Day10.main2,
-             Day11.main1, Day11.main2]
+             Day11.main1, Day11.main2,
+             Day12.main1, Day12.main2]

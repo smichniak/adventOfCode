@@ -43,3 +43,9 @@ butLast (_ : xs) = butLast xs
 
 compose :: Int -> (a -> a) -> a -> a
 compose n f = foldr (.) id (replicate n f)
+
+dx :: [Int]
+dx = [0, 0, -1, 1]
+
+dy :: [Int]
+dy = [-1, 1, 0, 0]
