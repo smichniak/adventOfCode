@@ -1,6 +1,8 @@
 module Utils where
 
 import qualified Data.Set as Set
+import Text.Parsec (char, digit, eof, many1, option, parse)
+import Text.Parsec.String (Parser)
 
 fromBool :: Bool -> Int
 fromBool True = 1
@@ -52,3 +54,17 @@ dy = [-1, 1, 0, 0]
 
 take2 :: [a] -> (a, a)
 take2 (x : y : _) = (x, y)
+
+parseString :: Parser a -> String -> a
+parseString par str =
+  let Right result = parse (par <* eof) "" str
+   in result
+
+natParser :: Parser Int
+natParser = readInt <$> many1 digit
+
+sign :: Num a => Parser (a -> a)
+sign = option id (char '-' >> return negate)
+
+intParser :: Parser Int
+intParser = sign <*> natParser

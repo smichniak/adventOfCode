@@ -1,9 +1,9 @@
 module Day14 where
 
 import qualified Data.Map as Map
-import Text.Parsec (char, digit, eof, many1, parse, sepBy, string)
+import Text.Parsec (char, digit, many1, sepBy, string)
 import Text.Parsec.String (Parser)
-import Utils (DayInput, DayMain, DaySolution, readInt, standardMain, take2)
+import Utils (DayInput, DayMain, DaySolution, intParser, parseString, readInt, standardMain, take2)
 
 type Coordinate = (Int, Int)
 
@@ -24,22 +24,14 @@ sand = 'o'
 sandGenerator :: Coordinate
 sandGenerator = (500, 0)
 
-intParser :: Parser Int
-intParser = read <$> many1 digit
-
 pairParser :: Parser Coordinate
 pairParser = take2 <$> sepBy intParser (char ',')
 
 structure :: Parser RockStructure
 structure = pairParser `sepBy` string " -> "
 
-parseLine :: String -> RockStructure
-parseLine str =
-  let Right result = parse (structure <* eof) "" str
-   in result
-
 inputParser :: DayInput InputType
-inputParser = map parseLine . lines
+inputParser = map (parseString structure) . lines
 
 drawLine :: Coordinate -> Coordinate -> Cave -> Cave
 drawLine (x1, y1) (x2, y2) cave

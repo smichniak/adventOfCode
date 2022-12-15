@@ -6,7 +6,7 @@ import Data.List.Split (splitOn)
 import Data.Maybe (fromJust, mapMaybe)
 import Text.Parsec (between, char, digit, eof, many1, parse, sepBy)
 import Text.Parsec.String (Parser)
-import Utils (DayInput, DayMain, DaySolution, readInt, standardMain, take2)
+import Utils (DayInput, DayMain, DaySolution, intParser, parseString, readInt, standardMain, take2)
 
 type InputType = [(Nested, Nested)]
 
@@ -16,15 +16,10 @@ instance Ord Nested where
   nested1 <= nested2 = fromJust $ compareNested nested1 nested2
 
 nested :: Parser Nested
-nested = Num <$> (read <$> many1 digit) <|> N <$> between (char '[') (char ']') (nested `sepBy` char ',')
-
-parseNested :: String -> Nested
-parseNested str =
-  let Right result = parse (nested <* eof) "" str
-   in result
+nested = Num <$> intParser <|> N <$> between (char '[') (char ']') (nested `sepBy` char ',')
 
 inputParser :: DayInput InputType
-inputParser s = map (take2 . map parseNested . lines) (splitOn "\n\n" s)
+inputParser s = map (take2 . map (parseString nested) . lines) (splitOn "\n\n" s)
 
 lengthCompare :: [Nested] -> [Nested] -> Maybe Bool
 lengthCompare l1 l2 =
@@ -46,10 +41,10 @@ solution1 :: DaySolution InputType
 solution1 = sum . map (+ 1) . findIndices id . mapMaybe (uncurry compareNested)
 
 divider1 :: Nested
-divider1 = parseNested "[[2]]"
+divider1 = parseString nested "[[2]]"
 
 divider2 :: Nested
-divider2 = parseNested "[[6]]"
+divider2 = parseString nested "[[6]]"
 
 solution2 :: DaySolution InputType
 solution2 nestedList =
