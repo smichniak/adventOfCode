@@ -1,17 +1,14 @@
 module Day15 where
 
-import Text.Parsec (between, many, many1, noneOf, sepBy)
+import Text.Parsec (between, many, sepBy)
 import Text.Parsec.String (Parser)
-import Utils (DayInput, DayMain, DaySolution, intParser, parseString, standardMain, take2)
+import Utils (DayInput, DayMain, DaySolution, intParser, notNumber, parseString, standardMain, take2)
 
 type Coordinate = (Int, Int)
 
 type SensorBeacon = (Coordinate, Coordinate)
 
 type InputType = [SensorBeacon]
-
-notNumber :: Parser String
-notNumber = many1 $ noneOf ('-' : ['0' .. '9'])
 
 lineParser :: Parser [Int]
 lineParser = between (many notNumber) (many notNumber) (sepBy intParser (many notNumber))
