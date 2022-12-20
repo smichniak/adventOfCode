@@ -55,6 +55,9 @@ dy = [-1, 1, 0, 0]
 take2 :: [a] -> (a, a)
 take2 (x : y : _) = (x, y)
 
+take3 :: [a] -> (a, a, a)
+take3 (x : y : z : _) = (x, y, z)
+
 parseString :: Parser a -> String -> a
 parseString par str =
   let Right result = parse (par <* eof) "" str
