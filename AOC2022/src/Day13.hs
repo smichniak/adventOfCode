@@ -1,10 +1,10 @@
 module Day13 where
 
 import Control.Applicative ((<|>))
-import Data.List (elemIndex, findIndices, sort)
+import Data.List (findIndices, sort)
 import Data.List.Split (splitOn)
 import Data.Maybe (fromJust, mapMaybe)
-import Text.Parsec (between, char, digit, eof, many1, parse, sepBy)
+import Text.Parsec (between, char, sepBy)
 import Text.Parsec.String (Parser)
 import Utils (DayInput, DayMain, DaySolution, intParser, parseString, readInt, standardMain, take2)
 

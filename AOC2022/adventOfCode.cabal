@@ -40,12 +40,15 @@ executable adventOfCode
                       Day15,
                       Day16,
                       Day17,
-                      Day18
+                      Day18,
+                      Day19,
+                      Day20,
+                      Day21
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
     
-    build-depends:    split, array, containers, parsec, mtl, matrix, extra, NumInstances
+    build-depends:    split, array, containers, parsec, mtl, matrix, extra, NumInstances, data-clist
 
     build-depends:    base ^>=4.16.3.0
     hs-source-dirs:   src

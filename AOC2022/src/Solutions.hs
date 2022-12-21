@@ -20,6 +20,9 @@ import qualified Day15
 import qualified Day16
 import qualified Day17
 import qualified Day18
+import qualified Day19
+import qualified Day20
+import qualified Day21
 
 solutions :: [DayMain]
 solutions = [Day1.main1, Day1.main2,
@@ -39,4 +42,7 @@ solutions = [Day1.main1, Day1.main2,
              Day15.main1, Day15.main2,
              Day16.main1, Day16.main2,
              Day17.main1, Day17.main2,
-             Day18.main1, Day18.main2]
+             Day18.main1, Day18.main2,
+             Day19.main1, Day19.main2,
+             Day20.main1, Day20.main2,
+             Day21.main1, Day21.main2]
