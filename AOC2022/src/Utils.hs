@@ -43,6 +43,13 @@ butLast :: [a] -> a
 butLast [x, _] = x
 butLast (_ : xs) = butLast xs
 
+getNext :: (Eq a) => a -> [a] -> Maybe a
+getNext x l = lookup x $ (zip <*> tail) $ cycle l
+
+rotate :: Int -> [a] -> [a]
+rotate _ [] = []
+rotate n xs = zipWith const (drop n (cycle xs)) xs
+
 compose :: Int -> (a -> a) -> a -> a
 compose n f = foldr (.) id (replicate n f)
 

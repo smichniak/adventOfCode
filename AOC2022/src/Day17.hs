@@ -61,7 +61,7 @@ getRockMove MLeft = moveLeft
 getRockMove MRight = moveRight
 
 rocks :: [UnplacedRock]
-rocks = concat $ repeat [rockMinus, rockPlus, rockL, rockI, rockSquare]
+rocks = cycle [rockMinus, rockPlus, rockL, rockI, rockSquare]
 
 isOccupied :: Occupied -> Coordinate -> Bool
 isOccupied occupied location@(x, y) = x <= 0 || x > caveWidth || y <= 0 || Set.member location occupied
