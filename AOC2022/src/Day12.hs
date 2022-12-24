@@ -44,12 +44,12 @@ getNeighbours stepFun arr src =
    in filter (and . (<*>) validNeighbourPredicates . singleton) neighbours
 
 bfs :: (Ord a) => a -> (a -> [a]) -> [(Int, a)]
-bfs start neighbors = bfs' (Seq.singleton (0, start)) Set.empty
+bfs start neighbours = bfs' (Seq.singleton (0, start)) Set.empty
   where
     bfs' Empty _ = []
     bfs' ((depth, x) :<| xs) visited
       | Set.member x visited = bfs' xs visited
-      | otherwise = (depth, x) : bfs' (xs >< fromList (zip (repeat $ depth + 1) (neighbors x))) (Set.insert x visited)
+      | otherwise = (depth, x) : bfs' (xs >< fromList (zip (repeat $ depth + 1) (neighbours x))) (Set.insert x visited)
 
 listTo2DArray :: [[Int]] -> Grid
 listTo2DArray xss =

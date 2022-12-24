@@ -13,7 +13,7 @@ solution1 :: DaySolution InputType
 solution1 = foldr (max . sum) 0
 
 solution2 :: DaySolution InputType
-solution2 elfs = sum $ drop (length elfs - 3) (sort $ map sum elfs)
+solution2 elves = sum $ drop (length elves - 3) (sort $ map sum elves)
 
 main1 :: DayMain
 main1 = standardMain solution1 inputParser
