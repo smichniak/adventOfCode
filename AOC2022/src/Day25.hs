@@ -54,11 +54,8 @@ showSnafu = concatMap show . reverse
 solution1 :: DayStringSolution InputType
 solution1 = showSnafu . decimalToSnafu . sum . map snafuToDecimal
 
-solution2 :: DayStringSolution InputType
-solution2 = undefined
-
 main1 :: DayMain
 main1 = standardStringMain solution1 inputParser
 
 main2 :: DayMain
-main2 = standardStringMain solution2 inputParser
+main2 _ = return "No Part 2 for Day 25"
