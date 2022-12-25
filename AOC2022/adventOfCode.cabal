@@ -20,6 +20,8 @@ extra-source-files: CHANGELOG.md
 executable adventOfCode
     main-is:          Main.hs
 
+    ghc-options: -threaded -rtsopts
+
     -- Modules included in this executable, other than Main.
     other-modules:    Solutions,
                       Utils,
@@ -46,12 +48,13 @@ executable adventOfCode
                       Day21,
                       Day22,
                       Day23,
-                      Day24
+                      Day24,
+                      Day25
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
     
-    build-depends:    split, array, containers, parsec, mtl, matrix, extra, NumInstances, data-clist
+    build-depends:    split, array, containers, parsec, mtl, matrix, extra, NumInstances, data-clist, parallel
 
     build-depends:    base ^>=4.16.3.0
     hs-source-dirs:   src
