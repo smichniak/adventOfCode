@@ -4,10 +4,6 @@ import qualified Data.Set as Set
 import Text.Parsec (char, digit, eof, many1, noneOf, option, parse)
 import Text.Parsec.String (Parser)
 
-fromBool :: Bool -> Int
-fromBool True = 1
-fromBool False = 0
-
 inputFile :: Int -> String
 inputFile n = "input/day" ++ show n ++ ".in"
 
@@ -80,7 +76,7 @@ intParser :: Parser Int
 intParser = sign <*> natParser
 
 notNumber :: Parser Char
-notNumber =  noneOf ('-' : ['0' .. '9'])
+notNumber = noneOf ('-' : ['0' .. '9'])
 
 notUpper :: Parser Char
 notUpper = noneOf ['A' .. 'Z']
