@@ -1,16 +1,16 @@
 use std::collections::BTreeMap;
 use std::rc::Rc;
 use crate::day::{DayNum, Runner};
-use crate::day1::Day1;
-use crate::day2::Day2;
+use crate::day01::Day01;
+use crate::day02::Day02;
 
 pub type RunnerMap = BTreeMap<DayNum, Runner>;
 
 pub fn get_runners() -> RunnerMap {
     let mut map = BTreeMap::new();
 
-    let r1 = Runner::new(Rc::new(Day1 {}));
-    let r2 = Runner::new(Rc::new(Day2 {}));
+    let r1 = Runner::new(Rc::new(Day01 {}));
+    let r2 = Runner::new(Rc::new(Day02 {}));
 
     let runners = [r1, r2];
 

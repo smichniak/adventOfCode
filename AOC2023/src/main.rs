@@ -1,3 +1,6 @@
+use std::path::Path;
+use std::fs::{read_to_string, write};
+
 use aoc2023::argparse::{parse, AppArguments};
 use aoc2023::day::{DayNum, Runner};
 use aoc2023::solutions::{get_runners, RunnerMap};
@@ -38,9 +41,11 @@ fn main() {
             std::process::exit(1);
         }
         Ok(args) => match args {
-            AppArguments::Prepare { day: _ } => {
-                eprintln!("Prepare not Implemented");
-                std::process::exit(1);
+            AppArguments::Prepare { day } => {
+                let template = read_to_string("./src/day_template.tmp").unwrap();
+                let new_file = template.replace("X", format!("{:02}", day).as_str());
+                let rs_filepath = Path::new(format!("./src/day{:02}.tmp", day).as_str());
+                write(rs_filepath, new_file).unwrap();
             }
             AppArguments::Download { day: _ } => {
                 eprintln!("Download not Implemented");

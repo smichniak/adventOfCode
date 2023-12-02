@@ -10,7 +10,7 @@ use nom::multi::separated_list0;
 
 use crate::day::{Day, DayNum};
 
-pub struct Day2 {}
+pub struct Day02 {}
 
 #[derive(Debug)]
 pub enum Color {
@@ -62,11 +62,11 @@ fn parse_line(line: &str) -> InputElement {
     (game, rounds)
 }
 
-impl Day for Day2 {
+impl Day for Day02 {
     type Input = Vec<InputElement>;
     type Result = u32;
 
-    fn day(&self) -> DayNum { 2 }
+    fn day(&self) -> DayNum { 02 }
 
     fn parse_input(&self, file_input: String) -> Self::Input {
         file_input.split('\n').map(parse_line).collect()
@@ -96,7 +96,7 @@ impl Day for Day2 {
 
 #[cfg(test)]
 mod tests {
-    use crate::day2::Day2;
+    use crate::day02::Day02;
     use crate::day::Day;
     use indoc::indoc;
 
@@ -107,14 +107,14 @@ mod tests {
       Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green"};
 
     #[test]
-    fn test2_1() {
-        let day = Day2 {};
+    fn test02_1() {
+        let day = Day02 {};
         assert_eq!(day.solve1(day.parse_input(INPUT.to_string())), 8);
     }
 
     #[test]
-    fn test2_2() {
-        let day = Day2 {};
+    fn test02_2() {
+        let day = Day02 {};
         assert_eq!(day.solve2(day.parse_input(INPUT.to_string())), 2286);
     }
 }

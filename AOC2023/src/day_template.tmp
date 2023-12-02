@@ -1,0 +1,42 @@
+use crate::day::{Day, DayNum};
+
+pub struct Day {}
+
+impl Day for DayX {
+    type Input = ();
+    type Result = u32;
+
+    fn day(&self) -> DayNum { X }
+
+    fn parse_input(&self, file_input: String) -> Self::Input {
+        todo!()
+    }
+
+    fn solve1(&self, input: Self::Input) -> Self::Result {
+        todo!()
+    }
+    fn solve2(&self, input: Self::Input) -> Self::Result {
+        todo!()
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::dayX::DayX;
+    use crate::day::Day;
+    use indoc::indoc;
+
+    const INPUT: &str = indoc! {""};
+
+    #[test]
+    fn testX_1() {
+        let day = Day02 {};
+        assert_eq!(day.solve1(day.parse_input(INPUT.to_string())), 42);
+    }
+
+    #[test]
+    fn testX_2() {
+        let day = Day02 {};
+        assert_eq!(day.solve2(day.parse_input(INPUT.to_string())), 42);
+    }
+}
