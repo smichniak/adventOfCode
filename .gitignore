@@ -16,3 +16,7 @@ AOC2021/cmake-build-debug/
 AOC2021/main.cpp
 
 AOC2022/dist-newstyle/
+
+AOC2023/target/
+
+AOC2023/Cargo.lock
