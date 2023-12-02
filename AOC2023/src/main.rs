@@ -1,4 +1,3 @@
-use std::path::Path;
 use std::fs::{read_to_string, write};
 
 use aoc2023::argparse::{parse, AppArguments};
@@ -44,8 +43,7 @@ fn main() {
             AppArguments::Prepare { day } => {
                 let template = read_to_string("./src/day_template.tmp").unwrap();
                 let new_file = template.replace("X", format!("{:02}", day).as_str());
-                let rs_filepath = Path::new(format!("./src/day{:02}.tmp", day).as_str());
-                write(rs_filepath, new_file).unwrap();
+                write(format!("./src/day{:02}.rs", day), new_file).unwrap();
             }
             AppArguments::Download { day: _ } => {
                 eprintln!("Download not Implemented");

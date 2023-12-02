@@ -1,5 +1,6 @@
+pub mod argparse;
+pub mod solutions;
 pub mod day;
 pub mod day01;
 pub mod day02;
-pub mod solutions;
-pub mod argparse;
+pub mod day03;

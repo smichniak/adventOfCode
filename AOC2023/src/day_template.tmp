@@ -1,6 +1,6 @@
 use crate::day::{Day, DayNum};
 
-pub struct Day {}
+pub struct DayX {}
 
 impl Day for DayX {
     type Input = ();
@@ -30,13 +30,13 @@ mod tests {
 
     #[test]
     fn testX_1() {
-        let day = Day02 {};
+        let day = DayX {};
         assert_eq!(day.solve1(day.parse_input(INPUT.to_string())), 42);
     }
 
     #[test]
     fn testX_2() {
-        let day = Day02 {};
+        let day = DayX {};
         assert_eq!(day.solve2(day.parse_input(INPUT.to_string())), 42);
     }
 }
