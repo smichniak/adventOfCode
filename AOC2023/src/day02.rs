@@ -10,7 +10,6 @@ use nom::multi::separated_list0;
 
 use crate::day::{Day, DayNum};
 
-pub struct Day02 {}
 
 #[derive(Debug)]
 pub enum Color {
@@ -61,6 +60,9 @@ fn parse_line(line: &str) -> InputElement {
     let (_, (game, rounds)) = tuple((start, parse_rounds))(line).unwrap();
     (game, rounds)
 }
+
+
+pub struct Day02 {}
 
 impl Day for Day02 {
     type Input = Vec<InputElement>;

@@ -44,6 +44,7 @@ fn main() {
                 let template = read_to_string("./src/day_template.tmp").unwrap();
                 let new_file = template.replace("X", format!("{:02}", day).as_str());
                 write(format!("./src/day{:02}.rs", day), new_file).unwrap();
+                // TODO create input file
             }
             AppArguments::Download { day: _ } => {
                 eprintln!("Download not Implemented");
