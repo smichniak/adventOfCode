@@ -35,7 +35,7 @@ impl Day for Day03 {
     fn day(&self) -> DayNum { 03 }
 
     fn parse_input(&self, file_input: String) -> Self::Input {
-        let lines: Vec<_> = file_input.split('\n').collect();
+        let lines = file_input.split('\n').collect_vec();
         let adjacent = adjacent_matrix(&lines);
         let mut result = Vec::new();
 
@@ -43,11 +43,11 @@ impl Day for Day03 {
         for (row, line) in lines.iter().enumerate() {
             for captures in re.captures_iter(line) {
                 let num_match = captures.get(0).unwrap();
-                let adjacent_symbols: Vec<_> = adjacent[row][num_match.range()].iter()
+                let adjacent_symbols = adjacent[row][num_match.range()].iter()
                     .copied()
                     .filter(|(_, _, c)| *c != '.' && !c.is_numeric())
                     .dedup()
-                    .collect();
+                    .collect_vec();
 
                 result.push((num_match.as_str().parse().unwrap(), adjacent_symbols));
             }

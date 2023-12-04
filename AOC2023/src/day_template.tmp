@@ -12,10 +12,11 @@ impl Day for DayX {
         todo!()
     }
 
-    fn solve1(&self, input: Self::Input) -> Self::Result {
+    fn solve1(&self, _input: Self::Input) -> Self::Result {
         todo!()
     }
-    fn solve2(&self, input: Self::Input) -> Self::Result {
+
+    fn solve2(&self, _input: Self::Input) -> Self::Result {
         todo!()
     }
 }
@@ -37,6 +38,6 @@ mod tests {
     #[test]
     fn testX_2() {
         let day = DayX {};
-        assert_eq!(day.solve2(day.parse_input(INPUT.to_string())), 42);
+        assert_eq!(day.solve2(day.parse_input2(INPUT.to_string())), 42);
     }
 }
