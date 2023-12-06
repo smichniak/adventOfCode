@@ -43,6 +43,8 @@ fn main() {
             AppArguments::Prepare { day } => {
                 let template = read_to_string("./src/day_template.tmp").unwrap();
                 let new_file = template.replace("X", format!("{:02}", day).as_str());
+
+                // TODO Check if file exists not to override
                 write(format!("./src/day{:02}.rs", day), new_file).unwrap();
                 // TODO create input file
             }
