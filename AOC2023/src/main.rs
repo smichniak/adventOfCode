@@ -1,4 +1,5 @@
 use std::fs::{read_to_string, write};
+use std::path::Path;
 
 use aoc2023::argparse::{parse, AppArguments};
 use aoc2023::day::{DayNum, Runner};
@@ -40,13 +41,18 @@ fn main() {
             std::process::exit(1);
         }
         Ok(args) => match args {
-            AppArguments::Prepare { day } => {
-                let template = read_to_string("./src/day_template.tmp").unwrap();
-                let new_file = template.replace("X", format!("{:02}", day).as_str());
+            AppArguments::Prepare { day, overwrite } => {
+                let new_path = format!("./src/day{:02}.rs", day);
+                if !Path::new(&new_path).exists() || overwrite {
+                    let template = read_to_string("./src/day_template.tmp").unwrap();
+                    let new_file = template.replace("X", format!("{:02}", day).as_str());
+                    write(new_path, new_file).unwrap();
+                }
 
-                // TODO Check if file exists not to override
-                write(format!("./src/day{:02}.rs", day), new_file).unwrap();
-                // TODO create input file
+                let input_path = format!("./input/day{:02}.in", day);
+                if !Path::new(&input_path).exists() || overwrite {
+                    write(input_path, "").unwrap();
+                }
             }
             AppArguments::Download { day: _ } => {
                 eprintln!("Download not Implemented");

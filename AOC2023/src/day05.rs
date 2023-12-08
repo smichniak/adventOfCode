@@ -76,7 +76,7 @@ impl Day for Day05 {
 
 
         for (i, seed0) in seeds.iter().enumerate().step_by(2) {
-            let step = if seeds[i + 1] > 1000000 {step} else {1};
+            let step = if seeds[i + 1] > 1000000 { step } else { 1 };
             for seed in (*seed0..*seed0 + seeds[i + 1]).step_by(step as usize) {
                 let new_loc = get_seed_location(seed, &blocks);
                 if new_loc < min_loc {

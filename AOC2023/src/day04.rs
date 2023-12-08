@@ -33,10 +33,7 @@ impl Day for Day04 {
     fn solve1(&self, input: Self::Input) -> Self::Result {
         input.iter()
             .map(|(winning, my)| my.iter().filter(|x| winning.contains(x)).count())
-            .map(|size| match size {
-                0 => 0,
-                n => 1 << (n - 1)
-            })
+            .map(|size| (1 << size) / 2)
             .sum()
     }
 

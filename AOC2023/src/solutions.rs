@@ -7,6 +7,8 @@ use crate::day03::Day03;
 use crate::day04::Day04;
 use crate::day05::Day05;
 use crate::day06::Day06;
+use crate::day07::Day07;
+use crate::day08::Day08;
 
 pub type RunnerMap = BTreeMap<DayNum, Runner>;
 
@@ -19,8 +21,10 @@ pub fn get_runners() -> RunnerMap {
     let r4 = Runner::new(Rc::new(Day04 {}));
     let r5 = Runner::new(Rc::new(Day05 {}));
     let r6 = Runner::new(Rc::new(Day06 {}));
+    let r7 = Runner::new(Rc::new(Day07 {}));
+    let r8 = Runner::new(Rc::new(Day08 {}));
 
-    let runners = [r1, r2, r3, r4, r5, r6];
+    let runners = [r1, r2, r3, r4, r5, r6, r7, r8];
 
     for r in runners {
         map.insert(r.day(), r);

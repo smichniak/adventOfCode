@@ -5,6 +5,7 @@ use crate::day::DayNum;
 pub enum AppArguments {
     Prepare {
         day: DayNum,
+        overwrite: bool,
     },
     Download {
         day: DayNum,
@@ -26,6 +27,7 @@ pub fn parse() -> Result<AppArguments, Box<dyn std::error::Error>> {
     let app_args = match args.subcommand()?.as_deref() {
         Some("prepare") => AppArguments::Prepare {
             day: args.opt_value_from_str("--day")?.unwrap_or(today),
+            overwrite: args.contains("--overwrite"),
         },
         Some("download") => AppArguments::Download {
             day: args.opt_value_from_str("--day")?.unwrap_or(today),
