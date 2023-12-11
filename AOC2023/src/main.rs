@@ -1,11 +1,13 @@
 use std::fs::{read_to_string, write};
 use std::path::Path;
+use std::time::Instant;
 
 use aoc2023::argparse::{parse, AppArguments};
 use aoc2023::day::{DayNum, Runner};
 use aoc2023::solutions::{get_runners, RunnerMap};
 
-fn run_day(runner: &Runner, part: u8, _time: bool) {
+fn run_day(runner: &Runner, part: u8, time: bool) {
+    let now = Instant::now();
     let solution = match part {
         1 => (runner.part1)(),
         2 => (runner.part2)(),
@@ -14,8 +16,11 @@ fn run_day(runner: &Runner, part: u8, _time: bool) {
             std::process::exit(1);
         }
     };
+    let elapsed_micros = now.elapsed().as_micros();
 
-    println!("Day: {}\tPart: {}\tSolution: {}", runner.day(), part, solution);
+    let solution_str = format!("Day: {:02}\tPart: {part}\tSolution: {solution}", runner.day());
+    let time_str = if time { format!("Time: {elapsed_micros:<8} mus") } else { "".to_string() };
+    println!("{solution_str:<50} {time_str}");
 }
 
 fn get_runner(mut runners: RunnerMap, day_num: DayNum) -> Runner {
