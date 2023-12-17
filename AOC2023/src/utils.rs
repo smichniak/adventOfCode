@@ -3,6 +3,15 @@ use nom::IResult;
 use nom::error::ParseError;
 use nom::InputLength;
 
+#[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash, Debug)]
+pub enum Direction {
+    Up,
+    Down,
+    Left,
+    Right,
+}
+
+
 pub fn parse<I, O, E, F>(mut parser: F, s: I) -> O
     where I: Clone + InputLength, F: FnMut(I) -> IResult<I, O, E>, E: ParseError<I> + std::fmt::Debug,
 {

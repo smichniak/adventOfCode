@@ -1,16 +1,9 @@
 use itertools::Itertools;
 use std::collections::HashSet;
 
+use crate::utils::Direction;
+use crate::utils::Direction::{Up, Down, Left, Right};
 use crate::day::{Day, DayNum};
-use crate::day16::Direction::{Up, Down, Left, Right};
-
-#[derive(Clone, Copy, PartialEq, Eq, Hash)]
-enum Direction {
-    Up,
-    Down,
-    Left,
-    Right,
-}
 
 fn flow_light(grid: &Vec<Vec<char>>, start: (isize, isize, Direction)) -> HashSet<(isize, isize, Direction)> {
     let (m, n) = (grid.len() as isize, grid[0].len() as isize);
