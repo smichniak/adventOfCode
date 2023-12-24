@@ -3,12 +3,45 @@ use nom::IResult;
 use nom::error::ParseError;
 use nom::InputLength;
 
+use crate::utils::Direction::{Up, Down, Left, Right};
+
 #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash, Debug)]
 pub enum Direction {
     Up,
     Down,
     Left,
     Right,
+}
+
+pub fn turn_right(i: isize, j: isize, dir: Direction) -> (isize, isize, Direction) {
+    match dir {
+        Up => (i, j + 1, Right),
+        Down => (i, j - 1, Left),
+        Left => (i - 1, j, Up),
+        Right => (i + 1, j, Down),
+    }
+}
+
+pub fn turn_left(i: isize, j: isize, dir: Direction) -> (isize, isize, Direction) {
+    match dir {
+        Up => (i, j - 1, Left),
+        Down => (i, j + 1, Right),
+        Left => (i + 1, j, Down),
+        Right => (i - 1, j, Up),
+    }
+}
+
+pub fn move_straight(i: isize, j: isize, dir: Direction) -> (isize, isize, Direction) {
+    move_straight_distance(i, j, dir, 1)
+}
+
+pub fn move_straight_distance(i: isize, j: isize, dir: Direction, d: isize) -> (isize, isize, Direction) {
+    match dir {
+        Up => (i - d, j, dir),
+        Down => (i + d, j, dir),
+        Left => (i, j - d, dir),
+        Right => (i, j + d, dir),
+    }
 }
 
 

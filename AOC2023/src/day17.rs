@@ -2,8 +2,8 @@ use itertools::Itertools;
 use std::collections::{HashMap, BinaryHeap};
 use std::cmp::Reverse;
 
-use crate::utils::Direction;
-use crate::utils::Direction::{Up, Down, Left, Right};
+use crate::utils::{Direction, turn_left, turn_right, move_straight};
+use crate::utils::Direction::Right;
 use crate::day::{Day, DayNum};
 
 #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash, Debug)]
@@ -12,33 +12,6 @@ struct Block {
     j: isize,
     d: Direction,
     straight: u32,
-}
-
-fn turn_right(i: isize, j: isize, dir: Direction) -> (isize, isize, Direction) {
-    match dir {
-        Up => (i, j + 1, Right),
-        Down => (i, j - 1, Left),
-        Left => (i - 1, j, Up),
-        Right => (i + 1, j, Down),
-    }
-}
-
-fn turn_left(i: isize, j: isize, dir: Direction) -> (isize, isize, Direction) {
-    match dir {
-        Up => (i, j - 1, Left),
-        Down => (i, j + 1, Right),
-        Left => (i + 1, j, Down),
-        Right => (i - 1, j, Up),
-    }
-}
-
-fn move_straight(i: isize, j: isize, dir: Direction) -> (isize, isize, Direction) {
-    match dir {
-        Up => (i - 1, j, dir),
-        Down => (i + 1, j, dir),
-        Left => (i, j - 1, dir),
-        Right => (i, j + 1, dir),
-    }
 }
 
 fn valid_points(i: isize, j: isize, m: isize, n: isize) -> bool {
