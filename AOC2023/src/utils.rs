@@ -5,6 +5,9 @@ use nom::InputLength;
 
 use crate::utils::Direction::{Up, Down, Left, Right};
 
+pub const DX: [i32; 4] = [-1, 1, 0, 0];
+pub const DY: [i32; 4] = [0, 0, -1, 1];
+
 #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash, Debug)]
 pub enum Direction {
     Up,
@@ -83,4 +86,12 @@ pub fn is_palindrome<T>(v: &Vec<T>) -> bool
         T: Eq + Clone,
 {
     *v == v.iter().rev().cloned().collect_vec()
+}
+
+pub fn string_chunks(s: String, n: usize) -> Vec<String> {
+    s.chars()
+        .collect_vec()
+        .chunks(n)
+        .map(|c| c.iter().collect::<String>())
+        .collect_vec()
 }

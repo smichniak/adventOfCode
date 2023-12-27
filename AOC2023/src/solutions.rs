@@ -20,33 +20,45 @@ use crate::day16::Day16;
 use crate::day17::Day17;
 use crate::day18::Day18;
 use crate::day19::Day19;
+use crate::day20::Day20;
+use crate::day21::Day21;
+use crate::day22::Day22;
+use crate::day23::Day23;
+use crate::day24::Day24;
+use crate::day25::Day25;
 
 pub type RunnerMap = BTreeMap<DayNum, Runner>;
 
 pub fn get_runners() -> RunnerMap {
     let mut map = BTreeMap::new();
 
-    let r1 = Runner::new(Rc::new(Day01 {}));
-    let r2 = Runner::new(Rc::new(Day02 {}));
-    let r3 = Runner::new(Rc::new(Day03 {}));
-    let r4 = Runner::new(Rc::new(Day04 {}));
-    let r5 = Runner::new(Rc::new(Day05 {}));
-    let r6 = Runner::new(Rc::new(Day06 {}));
-    let r7 = Runner::new(Rc::new(Day07 {}));
-    let r8 = Runner::new(Rc::new(Day08 {}));
-    let r9 = Runner::new(Rc::new(Day09 {}));
-    let r10 = Runner::new(Rc::new(Day10 {}));
-    let r11 = Runner::new(Rc::new(Day11 {}));
-    let r12 = Runner::new(Rc::new(Day12 {}));
-    let r13 = Runner::new(Rc::new(Day13 {}));
-    let r14 = Runner::new(Rc::new(Day14 {}));
-    let r15 = Runner::new(Rc::new(Day15 {}));
-    let r16 = Runner::new(Rc::new(Day16 {}));
-    let r17 = Runner::new(Rc::new(Day17 {}));
-    let r18 = Runner::new(Rc::new(Day18 {}));
-    let r19 = Runner::new(Rc::new(Day19 {}));
-
-    let runners = [r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18, r19];
+    let runners = [
+        Runner::new(Rc::new(Day01 {})),
+        Runner::new(Rc::new(Day02 {})),
+        Runner::new(Rc::new(Day03 {})),
+        Runner::new(Rc::new(Day04 {})),
+        Runner::new(Rc::new(Day05 {})),
+        Runner::new(Rc::new(Day06 {})),
+        Runner::new(Rc::new(Day07 {})),
+        Runner::new(Rc::new(Day08 {})),
+        Runner::new(Rc::new(Day09 {})),
+        Runner::new(Rc::new(Day10 {})),
+        Runner::new(Rc::new(Day11 {})),
+        Runner::new(Rc::new(Day12 {})),
+        Runner::new(Rc::new(Day13 {})),
+        Runner::new(Rc::new(Day14 {})),
+        Runner::new(Rc::new(Day15 {})),
+        Runner::new(Rc::new(Day16 {})),
+        Runner::new(Rc::new(Day17 {})),
+        Runner::new(Rc::new(Day18 {})),
+        Runner::new(Rc::new(Day19 {})),
+        Runner::new(Rc::new(Day20 {})),
+        Runner::new(Rc::new(Day21 {})),
+        Runner::new(Rc::new(Day22 {})),
+        Runner::new(Rc::new(Day23 {})),
+        Runner::new(Rc::new(Day24 {})),
+        Runner::new(Rc::new(Day25 {})),
+    ];
 
     for r in runners {
         map.insert(r.day(), r);
