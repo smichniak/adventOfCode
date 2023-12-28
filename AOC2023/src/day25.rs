@@ -62,13 +62,11 @@ fn contract(graph: &mut Graph) {
     graph.remove(&u);
 }
 
-fn karger_algorithm(graph: &Graph, iterations: usize) -> (HashSet<String>, HashSet<String>) {
+fn karger_algorithm(graph: &Graph, cut_size: usize) -> (HashSet<String>, HashSet<String>) {
     let mut min_size = graph.clone().values().map(|v| v.len()).sum();
     let (mut min_a, mut min_b) = (HashSet::new(), HashSet::new());
 
-
-    let mut iter = 0;
-    while iter < iterations || (min_a.len() * min_b.len()) == graph.len() - 1 {
+    while min_size > cut_size {
         let mut current_graph = graph.clone();
 
         while current_graph.len() > 2 {
@@ -79,13 +77,12 @@ fn karger_algorithm(graph: &Graph, iterations: usize) -> (HashSet<String>, HashS
         let (s1, a) = graph_iter.next().unwrap();
         let (s2, _) = graph_iter.next().unwrap();
 
-        let cut_size = a.len();
-        if cut_size < min_size {
-            min_size = cut_size;
+        let curr_cut_size = a.len();
+        if curr_cut_size < min_size {
+            min_size = curr_cut_size;
             min_a = HashSet::from_iter(string_chunks(s1, 3));
             min_b = HashSet::from_iter(string_chunks(s2, 3));
         }
-        iter += 1;
     }
 
     (min_a, min_b)
@@ -105,7 +102,7 @@ impl Day for Day25 {
 
     fn solve1(&self, input: Self::Input) -> Self::Result {
         let graph = build_graph(&input);
-        let (min_a, min_b) = karger_algorithm(&graph, 20);
+        let (min_a, min_b) = karger_algorithm(&graph, 3);
 
         min_a.len() * min_b.len()
     }
