@@ -55,7 +55,7 @@ defmodule Mix.Tasks.Prepare do
         :TODO
       end
 
-      @spec solution1(input_type()) :: integer()
+      @spec solution2(input_type()) :: integer()
       def solution2(_input) do
         :TODO
       end
@@ -69,13 +69,17 @@ defmodule Mix.Tasks.Prepare do
       use ExUnit.Case
 
       test "day #{day} example 1" do
-        input = :TODO
+        input =
+          \"\"\"
+          \"\"\"
 
         assert input |> AOC.Day#{day}.parser1() |> AOC.Day#{day}.solution1() == :TODO
       end
 
       test "day #{day} example 2" do
-        input = :TODO
+        input =
+          \"\"\"
+          \"\"\"
 
         assert input |> AOC.Day#{day}.parser2() |> AOC.Day#{day}.solution2() == :TODO
       end
