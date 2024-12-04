@@ -34,7 +34,7 @@ defmodule Mix.Tasks.Prepare do
   end
 
   def run([]) do
-    Date.utc_today().day |> Integer.to_string() |> (&[&1]).() |> run()
+    Date.utc_today().day |> Integer.to_string() |> (&run([&1])).()
   end
 
   defp day_module_template(day) do
