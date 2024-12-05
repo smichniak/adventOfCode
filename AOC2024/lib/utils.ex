@@ -55,7 +55,7 @@ defmodule Utils do
   end
 
   @doc """
-    Circle shift a list by a given number of positions in O(n) time.
+  Circle shift a list by a given number of positions in O(n) time.
 
   An implementation of the algorithm described in Jon Bentley's "Programming Pearls 2nd Edition".
 
@@ -87,4 +87,28 @@ defmodule Utils do
     |> Enum.reverse_slice(0, n)
     |> Enum.reverse_slice(0, size)
   end
+
+  @doc """
+  Returns the middle element of a list.
+
+  # Parameters
+    - list: A list of elements.
+
+  # Returns
+    - The middle element of the list.
+
+  # Examples
+
+      iex> middle_list_element([1, 2, 3, 4, 5])
+      3
+
+      iex> middle_list_element([1, 2, 3, 4])
+      2
+  """
+  @spec middle_list_element([a]) :: a when a: any()
+  def middle_list_element(list) do
+    list
+    |> Enum.at(div(length(list), 2))
+  end
+
 end
