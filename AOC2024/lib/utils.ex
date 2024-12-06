@@ -6,6 +6,7 @@ defmodule Utils do
   end
 
   @type int_list_pair :: {list(integer()), list(integer())}
+  @type coordinate :: {integer(), integer()}
 
   @doc """
   Counts the occurrences of each element in the given list.
@@ -111,4 +112,25 @@ defmodule Utils do
     |> Enum.at(div(length(list), 2))
   end
 
+  @doc """
+    Applies the given function to each element in the collection concurrently.
+
+    ## Parameters
+
+      - collection: The enumerable collection of items to process.
+      - func: The function to apply to each item in the collection.
+
+    ## Examples
+
+        iex> Utils.pmap([1, 2, 3], fn x -> x * 2 end)
+        [2, 4, 6]
+
+    This function uses `Task.async/1` to run the function concurrently on each element
+    and `Task.await/1` to collect the results.
+  """
+  def pmap(collection, func) do
+    collection
+    |> Enum.map(&Task.async(fn -> func.(&1) end))
+    |> Enum.map(&Task.await/1)
+  end
 end
