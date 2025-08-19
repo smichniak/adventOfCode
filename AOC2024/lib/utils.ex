@@ -9,6 +9,9 @@ defmodule Utils do
   @type int_map :: %{integer() => integer()}
   @type coordinate :: {integer(), integer()}
 
+  @spec direction_change() :: [{integer(), integer()}]
+  def direction_change(), do: [{-1, 0}, {0, 1}, {1, 0}, {0, -1}]
+
   @doc """
   Counts the occurrences of each element in the given list.
 

@@ -5,8 +5,6 @@ defmodule AOC.Day06 do
   @type coordinate_map :: %{coordinate => String.grapheme()}
   @type input_type :: {coordinate_map(), coordinate()}
 
-  defp direction_change(), do: [{-1, 0}, {0, 1}, {1, 0}, {0, -1}]
-
   @spec parser1(binary()) :: input_type()
   def parser1(text_input) do
     map =
