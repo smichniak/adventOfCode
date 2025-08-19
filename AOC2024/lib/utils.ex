@@ -5,7 +5,8 @@ defmodule Utils do
     end
   end
 
-  @type int_list_pair :: {list(integer()), list(integer())}
+  @type int_list_pair :: {[integer()], [integer()]}
+  @type int_map :: %{integer() => integer()}
   @type coordinate :: {integer(), integer()}
 
   @doc """
@@ -128,6 +129,7 @@ defmodule Utils do
     This function uses `Task.async/1` to run the function concurrently on each element
     and `Task.await/1` to collect the results.
   """
+  @spec pmap([a], (a -> b)) :: [b] when a: any(), b: any()
   def pmap(collection, func) do
     collection
     |> Enum.map(&Task.async(fn -> func.(&1) end))
