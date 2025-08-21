@@ -24,12 +24,4 @@ defmodule Day14Test do
 
     assert input |> AOC.Day14.parser1() |> AOC.Day14.solution1(@width, @height, @seconds) == 12
   end
-
-  test "day 14 example 2" do
-    input =
-      """
-      """
-
-    assert input |> AOC.Day14.parser2() |> AOC.Day14.solution2() == :TODO
-  end
 end
