@@ -1,5 +1,5 @@
-import * as fs from 'fs';
-import * as path from 'path';
+import * as fs from "fs";
+import * as path from "path";
 
 const args = process.argv.slice(2);
 let day = args[0];
@@ -7,7 +7,8 @@ let day = args[0];
 if (!day) {
     const today = new Date();
     // Default to today if it's December, otherwise require argument
-    if (today.getMonth() === 11) { // Month is 0-indexed (0-11)
+    if (today.getMonth() === 11) {
+        // Month is 0-indexed (0-11)
         day = today.getDate().toString();
     } else {
         console.error("Please provide a day number (e.g., npm run gen 1)");
@@ -21,20 +22,20 @@ if (isNaN(dayNum)) {
     process.exit(1);
 }
 
-const dayStr = dayNum.toString().padStart(2, '0');
-const projectRoot = path.join(__dirname, '..');
+const dayStr = dayNum.toString().padStart(2, "0");
+const projectRoot = path.join(__dirname, "..");
 
 // Paths
-const inputDir = path.join(projectRoot, 'input');
-const srcDir = path.join(projectRoot, 'src');
-const testDir = path.join(projectRoot, 'test');
+const inputDir = path.join(projectRoot, "input");
+const srcDir = path.join(projectRoot, "src");
+const testDir = path.join(projectRoot, "test");
 
 const inputFile = path.join(inputDir, `day${dayStr}.in`);
 const sourceFile = path.join(srcDir, `day${dayStr}.ts`);
 const testFile = path.join(testDir, `day${dayStr}.test.ts`);
 
 // Ensure directories exist
-[inputDir, srcDir, testDir].forEach(dir => {
+[inputDir, srcDir, testDir].forEach((dir) => {
     if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true });
     }
@@ -42,7 +43,7 @@ const testFile = path.join(testDir, `day${dayStr}.test.ts`);
 
 // Create input file
 if (!fs.existsSync(inputFile)) {
-    fs.writeFileSync(inputFile, '');
+    fs.writeFileSync(inputFile, "");
     console.log(`Created input file: ${inputFile}`);
 } else {
     console.log(`Input file already exists: ${inputFile}`);
@@ -52,11 +53,11 @@ if (!fs.existsSync(inputFile)) {
 if (!fs.existsSync(sourceFile)) {
     const template = `import { parseLines } from './utils';
 
-export function part1(input: string): any {
+export function part1(input: string): number | string {
     return "TODO";
 }
 
-export function part2(input: string): any {
+export function part2(input: string): number | string {
     return "TODO";
 }
 `;

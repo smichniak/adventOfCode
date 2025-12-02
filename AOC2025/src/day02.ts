@@ -1,4 +1,4 @@
-import { parseLines } from './utils';
+import { parseLines } from "./utils";
 
 export function part1(input: string): any {
     return "TODO";

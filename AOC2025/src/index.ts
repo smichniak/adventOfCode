@@ -1,5 +1,5 @@
-import { readInput } from './utils';
-import { performance } from 'perf_hooks';
+import { readInput } from "./utils";
+import { performance } from "perf_hooks";
 
 async function run() {
     const args = process.argv.slice(2);
@@ -14,7 +14,7 @@ async function run() {
         process.exit(1);
     }
 
-    const dayStr = dayNum.toString().padStart(2, '0');
+    const dayStr = dayNum.toString().padStart(2, "0");
     const modulePath = `./day${dayStr}`;
 
     try {
@@ -36,9 +36,8 @@ async function run() {
             const end = performance.now();
             console.log(`Day ${dayNum} Part 2: ${result} (${(end - start).toFixed(2)}ms)`);
         }
-
     } catch (error) {
-        console.error(`Could not load or run solution for day ${dayNum}`);
+        console.error(`Could not load or run solution for day ${dayNum}`, error);
     }
 }
 
