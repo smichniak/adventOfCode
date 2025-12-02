@@ -1,0 +1,27 @@
+{
+  "name": "aoc2025",
+  "version": "1.0.0",
+  "description": "Advent of Code 2025 Solutions in TypeScript",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "solve": "ts-node src/index.ts",
+    "gen": "ts-node src/prepare.ts",
+    "test": "jest"
+  },
+  "keywords": [
+    "advent-of-code",
+    "typescript"
+  ],
+  "author": "smichniak",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^20.0.0",
+    "eslint": "^9.39.1",
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.6",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.0"
+  }
+}

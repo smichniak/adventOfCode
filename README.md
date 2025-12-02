@@ -11,6 +11,7 @@ This repository contains my solutions for [Advent of Code](https://adventofcode.
 | **2022** | Haskell | 50/50⭐ 
 | **2023** | Rust | 50/50⭐ 
 | **2024** | Elixir | 29/50⭐ (in progress) 
+| **2025** | TypeScript | 0/24⭐ (in progress) 
 
 ## 📁 Project Structure
 
@@ -21,6 +22,7 @@ adventOfCode/
 ├── AOC2022/          # Haskell solutions (2022)
 ├── AOC2023/          # Rust solutions (2023)
 ├── AOC2024/          # Elixir solutions (2024)
+├── AOC2025/          # TypeScript solutions (2025)
 └── README.md         # This file
 ```
 
@@ -37,6 +39,7 @@ Recent years have their own setup requirements and usage patterns. For detailed 
 - **[AOC2022 (Haskell)](AOC2022/README.md)** - Cabal-based project with comprehensive CLI
 - **[AOC2023 (Rust)](AOC2023/README.md)** - Cargo workspace with solution runner and boilerplate generator
 - **[AOC2024 (Elixir)](AOC2024/README.md)** - Mix project with custom tasks for development workflow
+- **[AOC2025 (TypeScript)](AOC2025/README.md)** - TypeScript project with simple runner
 
 ## 🎯 About Advent of Code
 
