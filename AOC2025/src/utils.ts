@@ -15,3 +15,7 @@ export function readInput(day: number): string {
 export function parseLines(input: string): string[] {
     return input.split(/\r?\n/);
 }
+
+export function sum(numbers: number[]): number {
+    return numbers.reduce((a, b) => a + b, 0);
+}
