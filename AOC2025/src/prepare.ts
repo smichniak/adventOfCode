@@ -51,7 +51,7 @@ if (!fs.existsSync(inputFile)) {
 
 // Create source file
 if (!fs.existsSync(sourceFile)) {
-    const template = `import { parseLines } from './utils';
+    const template = `import { parseLines } from "./utils";
 
 export function part1(input: string): number | string {
     return "TODO";
