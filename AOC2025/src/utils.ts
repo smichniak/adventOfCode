@@ -16,6 +16,21 @@ export function parseLines(input: string): string[] {
     return input.split(/\r?\n/);
 }
 
-export function sum(numbers: number[]): number {
+export function sum(numbers: Array<number>): number {
     return numbers.reduce((a, b) => a + b, 0);
+}
+
+export function transpose<T>(matrix: Array<Array<T>>): Array<Array<T>> {
+    if (matrix.length === 0) {
+        return [];
+    }
+    return matrix[0].map((col, i) => matrix.map((row) => row[i]));
+}
+
+export function zip<T, U>(a: Array<T>, b: Array<U>): Array<[T, U]> {
+    return a.map((item, i) => [item, b[i]]);
+}
+
+export function findAllIndices<T>(l: T[], predicate: (x: T) => boolean): number[] {
+    return l.map((x, i) => (predicate(x) ? i : -1)).filter((x) => x !== -1);
 }
