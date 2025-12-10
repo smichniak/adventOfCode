@@ -1,6 +1,12 @@
 import * as fs from "fs";
 import * as path from "path";
 
+export type Coordinate3D = {
+    x: number;
+    y: number;
+    z: number;
+};
+
 export function readInput(day: number): string {
     const dayStr = day.toString().padStart(2, "0");
     const inputPath = path.join(__dirname, "..", "input", `day${dayStr}.in`);
@@ -139,5 +145,56 @@ export class StringMap<K, V> {
 
     entries(): IterableIterator<[K, V]> {
         return this.map.values();
+    }
+}
+
+export class FindUnionString<T> {
+    private parent: StringMap<T, T>;
+    private size: StringMap<T, number>;
+    private keyFn: (key: T) => string;
+
+    constructor(items: Iterable<T>, keyFn: (key: T) => string = JSON.stringify) {
+        this.parent = new StringMap<T, T>();
+        this.size = new StringMap<T, number>();
+        this.keyFn = keyFn;
+        for (const item of items) {
+            this.parent.set(item, item);
+            this.size.set(item, 1);
+        }
+    }
+
+    find(item: T): T {
+        if (this.keyFn(this.parent.get(item)!) !== this.keyFn(item)) {
+            this.parent.set(item, this.find(this.parent.get(item)!));
+        }
+        return this.parent.get(item)!;
+    }
+
+    connected(item1: T, item2: T): boolean {
+        return this.keyFn(this.find(item1)) === this.keyFn(this.find(item2));
+    }
+
+    union(item1: T, item2: T): void {
+        let root1 = this.find(item1);
+        let root2 = this.find(item2);
+        if (this.keyFn(root1) === this.keyFn(root2)) return;
+        if (this.size.get(root1)! < this.size.get(root2)!) {
+            [root1, root2] = [root2, root1];
+        }
+        this.parent.set(root2, root1);
+        this.size.set(root1, this.size.get(root1)! + this.size.get(root2)!);
+        this.size.delete(root2);
+    }
+
+    getSize(item: T): number {
+        return this.size.get(this.find(item))!;
+    }
+
+    getSizes(): number[] {
+        return Array.from(this.size.values());
+    }
+
+    getNumConnectedComponents(): number {
+        return this.size.size;
     }
 }
