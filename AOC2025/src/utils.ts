@@ -18,8 +18,7 @@ export function readInput(day: number): string {
     try {
         return fs.readFileSync(inputPath, "utf-8").trim();
     } catch (error) {
-        console.error(`Error reading input for day ${day}:`, error);
-        process.exit(1);
+        throw new Error(`Error reading input for day ${day}: ${error}`);
     }
 }
 

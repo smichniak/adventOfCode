@@ -1,27 +1,14 @@
 import { readInput } from "./utils";
 import { performance } from "perf_hooks";
+import * as fs from "fs";
 
-async function run() {
-    const args = process.argv.slice(2);
-    if (args.length < 1) {
-        console.error("Usage: npm start <day> [part]");
-        process.exit(1);
-    }
-
-    const dayNum = parseInt(args[0], 10);
-    if (isNaN(dayNum)) {
-        console.error("Invalid day number");
-        process.exit(1);
-    }
-
+async function runDay(dayNum: number, partArg: number | null) {
     const dayStr = dayNum.toString().padStart(2, "0");
     const modulePath = `./day${dayStr}`;
 
     try {
         const dayModule = await import(modulePath);
         const input = readInput(dayNum);
-
-        const partArg = args[1] ? parseInt(args[1], 10) : null;
 
         if (partArg === 1 || partArg === null) {
             const start = performance.now();
@@ -39,6 +26,33 @@ async function run() {
     } catch (error) {
         console.error(`Could not load or run solution for day ${dayNum}`, error);
     }
+}
+
+async function run() {
+    const args = process.argv.slice(2);
+
+    if (args.length < 1) {
+        console.log("No day specified, running all days...");
+        const srcDir = __dirname;
+        const files = fs.readdirSync(srcDir);
+        const dayFiles = files.filter((f) => /^day\d+\.ts$/.test(f)).sort();
+
+        for (const file of dayFiles) {
+            const dayNum = parseInt(file.match(/\d+/)![0], 10);
+            await runDay(dayNum, null);
+            console.log("---");
+        }
+        return;
+    }
+
+    const dayNum = parseInt(args[0], 10);
+    if (isNaN(dayNum)) {
+        console.error("Invalid day number");
+        process.exit(1);
+    }
+
+    const partArg = args[1] ? parseInt(args[1], 10) : null;
+    await runDay(dayNum, partArg);
 }
 
 run();
