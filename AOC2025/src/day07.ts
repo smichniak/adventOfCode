@@ -1,20 +1,15 @@
-import { parseLines, findAllIndices, StringSet, StringMap, sum } from "./utils";
-
-type Coord = {
-    x: number;
-    y: number;
-};
+import { parseLines, findAllIndices, StringSet, StringMap, sum, Coordinate2D } from "./utils";
 
 type Input = {
-    start: Coord;
-    splitters: StringSet<Coord>;
+    start: Coordinate2D;
+    splitters: StringSet<Coordinate2D>;
     height: number;
 };
 
 function parseInput(input: string): Input {
     const lines = parseLines(input);
     const start = { x: lines[0].indexOf("S"), y: 0 };
-    const splitters = new StringSet<Coord>(
+    const splitters = new StringSet<Coordinate2D>(
         lines.flatMap((line, y) =>
             findAllIndices(Array.from(line), (c) => c === "^").map((x) => ({ x, y }))
         )
@@ -26,8 +21,8 @@ function parseInput(input: string): Input {
 
 export function part1(input: string): number | string {
     const { start, splitters, height } = parseInput(input);
-    const visited = new StringSet<Coord>();
-    const usedSplitters = new StringSet<Coord>();
+    const visited = new StringSet<Coordinate2D>();
+    const usedSplitters = new StringSet<Coordinate2D>();
     const stack = [start];
     while (stack.length > 0) {
         const { x, y } = stack.pop()!;
@@ -44,14 +39,18 @@ export function part1(input: string): number | string {
     return usedSplitters.size;
 }
 
-function addPath(overlappingPaths: StringMap<Coord, number>, { x, y }: Coord, count: number) {
+function addPath(
+    overlappingPaths: StringMap<Coordinate2D, number>,
+    { x, y }: Coordinate2D,
+    count: number
+) {
     overlappingPaths.set({ x, y }, (overlappingPaths.get({ x, y }) ?? 0) + count);
 }
 
 export function part2(input: string): number | string {
     const { start, splitters, height } = parseInput(input);
-    const overlappingPaths = new StringMap<Coord, number>();
-    const visited = new StringSet<Coord>();
+    const overlappingPaths = new StringMap<Coordinate2D, number>();
+    const visited = new StringSet<Coordinate2D>();
 
     const queue = [start];
     overlappingPaths.set(start, 1);

@@ -1,6 +1,11 @@
 import * as fs from "fs";
 import * as path from "path";
 
+export type Coordinate2D = {
+    x: number;
+    y: number;
+};
+
 export type Coordinate3D = {
     x: number;
     y: number;
