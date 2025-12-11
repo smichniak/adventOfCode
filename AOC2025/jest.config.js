@@ -6,4 +6,11 @@ module.exports = {
   moduleNameMapper: {
     '^../src/(.*)$': '<rootDir>/src/$1',
   },
+  transform: {
+    '^.+\\.tsx?$': ['ts-jest', { useESM: true }],
+    '^.+\\.js$': 'ts-jest',
+  },
+  transformIgnorePatterns: [
+    'node_modules/(?!(yocto-queue)/)'
+  ],
 };
