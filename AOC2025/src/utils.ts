@@ -1,3 +1,6 @@
+import Queue from "yocto-queue";
+import { PriorityQueue } from "priority-queue-typescript";
+
 import * as fs from "fs";
 import * as path from "path";
 
@@ -201,4 +204,78 @@ export class FindUnionString<T> {
     getNumConnectedComponents(): number {
         return this.size.size;
     }
+}
+
+export function bfsDistance<T>(
+    start: T,
+    target: T,
+    neighbors: (node: T) => T[],
+    validStates: (node: T) => boolean = () => true,
+    keyFn: (node: T) => string = JSON.stringify
+): number {
+    const queue = new Queue<{ node: T; distance: number }>();
+
+    queue.enqueue({ node: start, distance: 0 });
+    const visited = new StringSet<T>([start], keyFn);
+
+    while (queue.size > 0) {
+        const { node, distance } = queue.dequeue()!;
+        if (keyFn(node) === keyFn(target)) return distance;
+        for (const neighbor of neighbors(node)) {
+            if (!visited.has(neighbor) && validStates(neighbor)) {
+                visited.add(neighbor);
+                queue.enqueue({ node: neighbor, distance: distance + 1 });
+            }
+        }
+    }
+
+    return -1;
+}
+
+export function aStarDistance<T>(
+    start: T,
+    target: T,
+    neighbors: (node: T) => T[],
+    validStates: (node: T) => boolean = () => true,
+    distanceHeuristicFn: (node: T, targetNode: T) => number,
+    keyFn: (node: T) => string = JSON.stringify
+): number {
+    const openSet = new PriorityQueue<{ node: T; g: number; f: number }>(
+        1,
+        (a: { node: T; g: number; f: number }, b: { node: T; g: number; f: number }) => a.f - b.f
+    );
+    openSet.add({ node: start, g: 0, f: distanceHeuristicFn(start, target) });
+
+    const gScore = new StringMap<T, number>([], keyFn);
+    gScore.set(start, 0);
+
+    const targetKey = keyFn(target);
+
+    while (openSet.size() > 0) {
+        const { node, g } = openSet.poll()!;
+
+        if (keyFn(node) === targetKey) {
+            return g;
+        }
+
+        if (g > (gScore.get(node) ?? Infinity)) {
+            continue;
+        }
+
+        for (const neighbor of neighbors(node)) {
+            if (validStates(neighbor)) {
+                const tentativeG = g + 1;
+                if (tentativeG < (gScore.get(neighbor) ?? Infinity)) {
+                    gScore.set(neighbor, tentativeG);
+                    openSet.add({
+                        node: neighbor,
+                        g: tentativeG,
+                        f: tentativeG + distanceHeuristicFn(neighbor, target),
+                    });
+                }
+            }
+        }
+    }
+
+    return -1;
 }
