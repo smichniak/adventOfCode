@@ -11,7 +11,7 @@ This repository contains my solutions for [Advent of Code](https://adventofcode.
 | **2022** | Haskell | 50/50⭐ 
 | **2023** | Rust | 50/50⭐ 
 | **2024** | Elixir | 29/50⭐ (in progress) 
-| **2025** | TypeScript | 20/24⭐ (in progress) 
+| **2025** | TypeScript | 22/24⭐ (in progress) 
 
 ## 📁 Project Structure
 

@@ -1,0 +1,612 @@
+etv: dfj
+vzz: sjr
+uyy: vxy
+dkh: plc
+wix: gix rid
+afy: mcc qwm
+gqs: jks
+ajq: rum qsv
+xtm: qdu fmv zle qua
+edv: vtg ooa run
+ptx: out
+lrg: bkn jhm
+sxy: hkq ewj uqo
+azv: oyt fvy
+pyi: gqs kyg qok
+fsu: rty syv cyy
+plb: xuz onj
+rtc: dca iwl
+oik: aib
+wep: oig syd jzk wfj miu
+vtg: aho pmk fyu ncz zay urm idm hir mog get fav yzd tod
+lpa: qrk vtf
+bld: giq tsm
+dap: buc
+mrs: izf mig upb
+jgz: zlm lub
+owr: ldt mmh atk hbl
+xck: aon dxx qil
+amo: xcr mii bjo vih
+qrk: gew plm
+qwm: jts jfm slu
+jef: pln ekw kev gct bdn mbk aok owg oko
+zfc: uof tnc cvp umv
+aok: vsp ipu
+wyi: lva wcy ehz cww
+xlp: wxd uhm
+ent: kdt iyl
+nps: out
+lbf: fct jgv fjv
+xdw: wyi dkh lkl gej
+zen: btr azo
+ocw: ewg dje
+cyr: gtn jft rgu
+opc: lva wcy ehz
+llq: wqs fye
+wqp: hur zve gme bsq
+cyy: kel
+yvq: sqt eyl
+wbn: run ooa vtg
+trr: cvp
+jgn: xdw enq kgm
+dbv: zpe dac prb
+mcv: fta
+kyr: rum qsv gqx
+bqm: enq kgm xdw
+ocx: out
+tzd: pvb
+fcx: dca
+onj: tam krr
+hbf: kgm xdw kel
+tam: enq
+ucu: bxd bpp uhm wxd
+anb: rmq azo btr
+umv: tzd sjn lyt pyi tkr fmn fzq gys lej lue nds pfb vsn tly
+nrk: tzi ovs fie
+fqm: iwl dca
+kxc: mxc buc
+gnf: vmg
+vrt: uof tnc umv cvp
+sth: tcy uyy kyi jni
+zoy: tse vnq
+cvp: lyt pyi tkr tzd sjn tyz dbv jlv pfb lfp vsn lag tly cag gys lej llq lue fzq fmn
+cjd: izf
+dsh: pzd pkp
+zwo: you
+rip: zve bsq gme egx
+lzm: nps tvp
+iyl: fte eyn
+ehf: hpu dmh tyj
+ldt: zsl edv bye
+ceu: aib nyd
+wzs: tnc uof cvp
+isj: you
+she: bzz
+ezy: dxz
+uoy: zlv dje kuz
+ftc: uof
+ruq: run syn vtg
+qil: yju abb cga
+wfj: uof umv cvp
+rfg: uoy
+nix: you dca
+jmk: dsh clr
+mbk: ydl kma
+vxn: cyr
+jlv: dap cso cfg
+kma: gwy yqe sjr
+syv: kel xpi enq
+jur: onj ywl
+xrv: tnc uof umv
+xuz: wjy
+gxq: uxl zpb
+fwo: gxq jic
+wzp: uof tnc
+mmw: pln qbi sod vld fia ekw bdn gct pnu qmb lsh ynt kez gqp mbk nzi owg rna ypn
+iev: aon aro
+fja: out
+pyh: xdw
+bza: ooa run
+pgq: rgo vli
+vsn: kyg gqs qok xyv
+kev: ipu
+wra: ygj qan wix
+owg: rps ixy jtm
+afd: meb smh fxy
+yys: ajq vvu jft gtn
+bsq: jpz kyr
+nwj: bgb fvy bvx oyt
+vih: yni oik tmb
+xzr: ooa syn vtg
+gme: kyr jpz gmr
+ffx: pnu lsh nvi qmb pln wjg fia ypn oko rna nzi
+sjr: kel xpi enq kgm xdw
+sof: xdw kgm kel
+ooa: xmx pmk cfa jmk arx aho ybp ncz fyu urm mog hir zay afd amo ipk gwv tod ssw yzd wdo get
+fek: mkm rys msy rfg
+ygj: gix rid jjq
+qdv: pff vol yys kvu
+mbn: pff yys vol kvu
+nvi: dse uyr drp yib
+abb: jpb zwo rtc oru
+cfg: dtm buc qvu mxc fcx
+heo: csx
+dfj: qwm
+hpu: dga
+xfj: qdu fmv
+kvu: vvu
+qvu: iwl you
+yqe: xpi xdw kel
+ohw: ydf ftc trr ice
+uza: out
+fhr: gew ozc plm yin
+jks: iwl dca
+yci: vli
+bxd: anb sqs zen
+zpg: pwi biy oxs
+lhe: jhm
+zve: gmr
+dxz: you dca iwl
+zlv: yww xzr
+bye: syn run
+lbs: run
+meb: oxh
+gvs: pbf vkz kdl zpm xjc
+ctg: rys mkm rfg
+uzl: gxq ppc ftd
+kyc: aro qil dxx
+tgd: out
+ipu: vtf fhr
+xcf: kax rmq
+rgu: rum
+wcy: mbn vxn exo
+jtm: gqb hns
+msy: ocw
+fta: msq opj pyh
+qqp: pnt
+fhs: sof vnq bqm
+fkr: ooa run syn
+oru: iwl
+zay: ohw uwi ylt
+fbw: gxq ftd
+gkz: efh rjf ehf
+ypn: ksm dse
+smh: mbi
+zod: tjc syv gur
+clr: ekx pzd pkp
+sal: bqm sof tse vnq
+biy: msq
+ydo: mzz lks
+gwy: xpi enq
+iul: wxd bpp uhm dpl
+xtr: vtg syn
+irs: aoy jfc gkz
+npo: ecc plc
+rgo: zoy ozf dlw sal
+hkq: ovs tgd
+rmq: ruq pmf
+bry: fsu vfl
+rbj: tnc
+ydl: hbf yqe nur gwy
+pwi: xod zad
+log: wix ygj
+pet: bry
+ayv: gkz jfc
+mlw: eyn fqb
+fpz: ldt mmh
+dse: mcv
+dac: fsr dxz
+wjy: enq xpi kgm xdw
+ubn: xuz iiu ywl
+qsv: ctg xlp iul sfr owr ucu she jbu rpd his qqe log wra ike qnq
+qip: run syn
+yag: tcy jni kyi uyy
+eyn: hkq uqo
+yco: yvq ehs pds
+ftd: zpb uxl
+hvx: out
+tle: you
+fyu: bte gvs duj
+vkz: rbj
+zsl: vtg
+rsm: izf mig upb
+tyj: vmg
+oig: cvp umv
+sod: rso ydl vzz
+tek: mko dfj
+iiu: wjy tam krr
+gix: kdj xaf wbn
+dtm: dca iwl
+rhp: rkt wkx ent
+com: you
+aho: gvs kpp
+tap: mrs zux rsm
+gew: tid
+ske: qiv
+ivz: vtg syn run
+xjc: vrt rbj xrv ciz
+big: qsv rum
+dzc: kel xdw enq xpi kgm
+vxy: syn vtg run ooa
+yka: kcq
+ojj: xfj
+fhw: run ooa syn
+nns: wkx rkt
+azo: itn pmf
+slu: big qcc
+ozw: tnc umv
+cww: mbn vxn qdv
+rpd: qns xlj bzz
+rjf: lup dmh hpu
+fia: rps dss pet jtm
+fav: kpp gvs
+ice: uof
+sjn: bxq fye
+jhm: vpv
+kcg: jfc
+asr: eyn sxy fte
+oxh: jgz xpc
+wls: nps
+dss: xmj
+npb: out
+giq: pds yvq
+qbi: kma xqv
+ybp: meb
+xod: enq kgm kel
+pmk: xbg uwi ylt ohw
+atk: zsl edv lbs
+bqw: tvp tcs
+zxl: out
+jfm: qcc
+epx: xpi enq kgm kel
+miu: tnc umv
+mig: qsv rum
+ksm: mjd
+kif: out
+ewg: fhw
+aao: gix
+syn: yzd ipk pmk xmx ybp arx afd
+vqs: bkn
+ecx: bkn jhm
+kui: tvp
+xxk: ztv owl
+msq: xpi xdw
+ovs: out
+fte: ewj uqo
+fie: out
+tjr: hnn ymb csx mne
+ciz: cvp umv uof
+vtt: lub zlm
+kbi: khv vli
+idm: xcr bjo mii
+ztv: tjr adc kvg
+bjo: yni lmp
+sqs: kax btr azo
+nds: kyc
+tod: mii
+vli: dlw ozf sal fhs zoy
+jfc: efh
+fzq: xck
+wuz: kyi uyy tcy
+wjg: ipu vsp
+syd: cvp tnc
+bvx: you iwl
+uqo: tss fie
+ecc: zux rsm yrg cjd
+yzd: wse tjg
+lub: uof umv cvp
+wdo: bjo
+kax: itn pmf
+xaf: syn
+tcy: qip fkr ivz euw
+cuq: out
+xej: afy
+ojr: gxq ppc
+xmj: zod
+qnq: wix
+plm: epx jgn dzc yzf
+oko: jur plb ubn
+cpb: lzm wls kui bqw
+aro: abb
+yqa: bvx
+cuw: out
+jzi: ovc jgv fjv fct
+cso: qvu buc
+uxl: cpb cua hpo
+rps: xmj gqb hns bry
+dhu: cpb
+rty: kel enq xdw
+pkp: wzs ozw rdz
+yin: dzc jgn epx
+dmh: ael vmg
+tjg: lks mzz jiw
+arx: ydo wse
+znz: vqs ecx
+gmr: rum qsv
+oka: che lhe
+lfp: kxc cso dap
+tcs: out
+ynm: rum gqx
+lsh: vzz
+yzf: xdw kgm xpi kel
+vee: sai ent
+mxc: iwl
+opj: xdw kgm xpi enq
+rso: hbf sjr yqe nur
+hbl: zsl
+btr: itn ruq
+buc: you dca iwl
+bbd: cuq ptx
+ymb: rin
+fxy: oxh hph mbi
+ssw: cmp tjg wse
+eyl: xzt aih ske
+plc: mrs zux rsm cjd yrg
+lmq: tsm yco
+pmf: vtg ooa
+mkm: uoy ocw
+hir: fxy lmh
+mko: mcc fft
+xzt: jpt qiv npb
+glm: flh lva
+tid: xpi enq xdw
+kvg: hnn
+duj: pbf kdl zpm vkz
+fye: ege meg nwj
+flh: qdv
+fap: biy dwu pwi
+mmh: bye edv
+bxq: ege yqa
+yml: out
+zad: xpi kel
+ozf: vnq
+kbt: yag
+eqz: rfg rys
+evp: rgo khv vli
+vsp: qrk fhr
+uwi: zfc ftc trr
+his: aao ygj
+fvy: iwl
+ncz: ohw uwi agx xbg
+gej: wcy flh
+adc: csx mne ymb hnn
+pzd: rdz ozw wzs
+csx: bbd rin xli
+xyv: fqm
+bjw: rgo
+cmp: mzz lks
+wyc: xfj ghv
+mog: gvs duj
+qok: fqm zob jks nix
+jni: ivz qip
+jbu: qns
+ipk: gvs duj bte
+ooi: cuw zxl vpv
+oxs: xod pyh opj msq
+jpb: you iwl
+hur: jpz
+pyd: out
+xli: ptx yml uza
+kdt: sxy fte
+qpq: ztv kcq
+fqb: nrk
+lyt: pvb cfg cso
+owl: yva heo tjr adc
+qan: rid gix
+lag: bxq
+tse: enq xpi kel
+zux: upb mig
+qet: ywl
+yww: run syn vtg
+enq: dkh lkl wyc jvl rip etv tek twe xej wqp wyi opc gej ojj glm
+gys: dac prb
+cua: fnn kui wls bqw
+yju: oru rtc com jpb
+lva: mbn exo
+qiv: out
+jiw: umv cvp uof
+gqc: big
+yni: aib nyd
+jvl: xfj xtm ghv
+gur: xdw xpi enq kgm kel
+xbg: trr zfc
+jts: big
+fwa: fjv jgv ovc qqp
+hns: zod fsu
+lej: zpe prb ezy
+dga: fja
+ycs: ehs
+zpb: cpb hpo
+jpz: rum qsv
+exo: vol kvu
+kel: twe sjk gej npo xrh glm wyc lkl rip
+ovc: znz pnt
+qcc: rum qsv
+tnc: jlv dbv tyz sjn tzd pyi fzq lue nds llq lej gys cag lag vsn lfp pfb
+pnt: vqs lrg ecx
+upb: gqx
+kdj: syn ooa
+pds: sqt lkn
+jzk: umv uof
+xlj: sth wuz
+gqp: dss
+fmv: gqx rum qsv
+yva: mne csx
+vnq: xdw xpi kgm kel
+izf: gqx rum
+rna: ubn qet
+sfr: mmh ldt hbl
+hph: ozy xpc vtt
+cga: zwo com
+bpp: zen sqs anb xcf
+vol: rgu
+kyg: zob fqm jks nix
+che: ooi bkn
+dpl: sqs anb
+get: xcr
+cfa: clr iua
+vld: ubn jur qet
+qdu: qsv gqx
+afz: sai ent wkx
+bdn: dse uyr drp
+lue: xck rdy
+efh: gnf lup tyj
+gtn: gqx
+pln: pgq
+bte: vkz kdl
+jnv: cua cpb hpo
+ppc: dhu jnv uxl
+lmh: oxh
+mjd: pwi oxs dwu
+egx: jpz
+ekx: wzs rdz
+ydf: umv tnc
+vmg: fja meh
+pvb: fcx buc dtm
+ylt: ydf trr zfc ice
+ujj: wxd uhm bpp bxd dpl
+ktf: wix aao
+vbp: qns kbt bzz xlj
+kgm: wqp opc gej ojj npo glm xrh lkl wyc rip xej
+ghv: qua zle
+run: ncz fyu pmk cfa xmx ybp arx aho jmk tod ssw ipk gwv fav get wdo zay mog hir idm urm amo afd
+yib: zpg mcv mjd
+uof: tly lag vsn lfp lue nds llq gys lej cag fzq fmn tkr pyi sjn tzd dbv jlv
+ixy: hns
+ewj: tss tzi ovs fie
+euw: syn run ooa
+xqv: nur hbf yqe
+fft: slu jts sqf
+wqs: azv meg ege nwj
+kuz: flj xzr xtr yww fhw
+meh: out
+tly: iev xck
+vpv: out
+zpe: isj ava
+wxd: xcf
+cag: xyv gqs qok
+svr: ffx jef mmw
+pff: vvu gtn jft
+gct: lpa ipu
+xia: ztv
+mkk: aoy jfc
+bkn: vpv kif cuw
+agx: ftc ice
+mii: ceu
+lkn: xzt aih ske
+hnn: rin bbd
+czr: bzz xlj
+khv: ozf dlw fhs zoy
+ozy: lub
+mbi: xpc vtt ddt ozy jgz
+lmp: wep
+xrh: ecc plc tap
+yrg: upb
+wwm: hbo yco tsm giq ycs
+zlm: tnc uof
+wse: lks mzz
+tsm: pds
+rid: kdj xaf wbn
+ehs: sqt
+jjq: wbn bza xaf
+sjk: egx bsq gme zve
+gqb: zod fsu
+prb: isj fsr
+jgv: znz oka
+krr: kel xpi enq xdw
+flj: ooa vtg syn
+rdy: aro aon
+uhm: sqs
+nzi: lpa
+ael: meh hvx
+tzi: out
+nyd: wfj miu jzk syd oig
+rin: pyd uza
+vvu: rum qsv
+kpp: zpm xjc vkz
+aon: yju
+aih: jpt
+urm: fxy
+kez: kma xqv
+nur: kel xdw enq
+fmn: ezy zpe
+rkt: kdt iyl asr
+zpm: rbj ciz
+tss: out
+zob: iwl dca you
+pfb: cso cfg pvb dap
+hbo: ehs
+gqx: fpz owr iul wra log qqe eqz rpd ike ujj
+xpi: etv rip jvl lkl wyc dkh xrh tek xej glm npo gej ojj sjk wyi wqp opc
+jft: rum qsv gqx
+pbf: vrt ciz
+tvp: out
+bgb: iwl
+lup: ael vmg dga
+sqt: ske
+lks: umv cvp uof
+pnu: kbi yci evp pgq
+dxx: cga
+oyt: dca iwl
+rum: ujj ike fek eqz qqe his rpd ktf ucu fpz czr owr sfr vbp ctg xlp
+qua: rum
+ozc: jgn
+tjc: kgm
+qns: yag sth
+jpt: out
+gwv: clr dsh
+dca: yka fbw nns jzi irs uzl kcg ojr lmq rhp afz fwo lbf xxk xia wwm bld mkk qpq ayv
+mcc: jts gqc
+iwl: jzi kxt nns fwa uzl irs lmq afz xia xxk lbf vee ayv qpq bld
+ehz: exo vxn mbn
+dlw: tse sof
+itn: syn ooa run
+fjv: znz
+qqe: rys sqo
+zle: gqx rum
+ike: wxd bpp bxd dpl
+kyi: fkr
+vtf: ozc gew
+ava: iwl
+fct: oka znz pnt
+hpo: wls kui bqw fnn
+xmx: dsh iua
+lkl: mko
+vfl: syv rty gur
+wkx: kdt iyl
+rys: mby ocw
+tmb: wep nyd aib
+sqo: uoy ocw
+bzz: wuz
+mby: ewg zlv
+xcr: yni oik ceu tmb lmp
+jic: dhu jnv uxl zpb
+aoy: rjf ehf
+tyz: iev
+mzz: tnc umv cvp
+rdz: uof tnc
+xpc: lub zlm
+uyr: zpg mcv fap
+mne: bbd xli
+kxt: sai
+ekw: pgq evp bjw
+sqf: ynm big
+drp: mjd zpg fap
+meg: tle oyt bvx bgb fvy
+fsr: dca
+dwu: opj zad xod pyh
+ddt: wzp
+tkr: dac prb ezy
+you: nns ojr rhp yka fwa xxk xia wwm kcg
+dje: flj
+kdl: rbj vrt xrv ciz
+fnn: ocx
+kcq: kvg yva tjr adc
+ynt: pet dss rps
+aib: syd jzk miu
+qmb: ubn
+ege: fvy bgb tle
+sai: mlw
+twe: afy mko dfj
+iua: pzd pkp
+ywl: krr tam
