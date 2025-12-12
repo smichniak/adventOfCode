@@ -1,7 +1,7 @@
 import { solve, equalTo } from "yalps";
 import { Model, Constraint, Coefficients } from "yalps";
 
-import { parseLines, bfsDistance, sum } from "./utils";
+import { parseLines, sum } from "./utils";
 
 type Machine = {
     targetLights: number;
@@ -38,23 +38,43 @@ function switchNumber(switchIndices: number[]): number {
     return switchIndices.reduce((res, index) => res | (1 << index), 0);
 }
 
-function switchNumbers(switchIndices: number[][]): number[] {
-    return switchIndices.map(switchNumber);
+function pressButtons(buttonBitMap: number, switchNums: number[]) {
+    let index = 0;
+    let result = 0;
+
+    while (buttonBitMap > 0) {
+        if (buttonBitMap % 2 == 1) {
+            result ^= switchNums[index];
+        }
+        index++;
+        buttonBitMap >>= 1;
+    }
+
+    return result;
 }
 
-function switchLights(lights: number, switchNums: number[]): number[] {
-    return switchNums.map((switchNum) => lights ^ switchNum);
+function onBits(bitMap: number) {
+    let result = 0;
+    while (bitMap > 0) {
+        result += bitMap % 2;
+        bitMap >>= 1;
+    }
+    return result;
 }
 
 export function part1(input: string): number | string {
     const machines = parseLines(input).map(parseMachine);
 
     return sum(
-        machines.map((machine) =>
-            bfsDistance<number>(0, machine.targetLights, (lights) =>
-                switchLights(lights, switchNumbers(machine.switches))
-            )
-        )
+        machines.map((machine) => {
+            const switchNums = machine.switches.map(switchNumber);
+            return Array.from({ length: 1 << switchNums.length }, (_, offset) => [
+                offset,
+                onBits(offset),
+            ])
+                .sort((a, b) => a[1] - b[1])
+                .find(([bitMap]) => pressButtons(bitMap, switchNums) === machine.targetLights)![1];
+        })
     );
 }
 
